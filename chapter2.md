@@ -50,6 +50,7 @@ Phone and TabletnおMinimum SDKでは、サポートする最低レベルのAPI�
 
 
 AndroidManifext.xml
+<loc>
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -73,6 +74,7 @@ AndroidManifext.xml
 
 </manifest>
 ```
+</loc>
 
 
 
