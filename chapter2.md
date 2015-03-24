@@ -26,4 +26,16 @@ Phone and TabletnおMinimum SDKでは、サポートする最低レベルのAPI�
 
 ![Image0204](pre0204.png)
 
+最後に、Activity Name等を確認し、[Finish]を押す。
+
+| 項目名 | 内容 |
+| -- | -- |
+| Activity Name: | Androidアプリの起動時に呼び出されるActivityのクラス名 |
+| Layout Name: | Activity Nameで指定したActivityから呼び出されるUIのレイアウトのXMLのファイル名を指定 |
+| Title | アプリのタイトルを指定 |
+| Menu Resource Name: | Menuで表示するレイアウトのXMLのファイル名を指定
+
+
+![Image0205](pre0205.png)
+
 
