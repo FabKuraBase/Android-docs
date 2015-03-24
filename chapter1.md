@@ -21,4 +21,7 @@ https://www.atlassian.com/ja/software/sourcetree/overview
 
 ![](app002.png)
 
+SourceTreeのインストール画面がでるので、SourceTreeアイコンをドラック&ドロップする。
+
 ![](app003.png)
+
