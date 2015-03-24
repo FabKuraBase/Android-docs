@@ -4,7 +4,7 @@
 Android Studioをダウンロードする。
 http://developer.android.com/sdk/index.html#top
 
-ダウンロードした、dmgファイルを実行する
+ダウンロードした、dmgファイルを実行する。
 
 ![Image000](app000.png)
 
@@ -17,4 +17,7 @@ Android Studio 1.0のインストール画面が表示されるので、Android 
 SourceTreeをダウンロードする。
 https://www.atlassian.com/ja/software/sourcetree/overview
 
+ダウンロードしたdmgファイルを実行する。
+
+![](app002.png)
 
