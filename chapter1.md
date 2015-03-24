@@ -12,8 +12,9 @@ Android Studio 1.0のインストール画面が表示されるので、Android 
 
 ![Image001](app001.png)
 
-## Githubのインストール
+## SourceTreeのインストール
 
-Githubをダウンロードする。
-https://mac.github.com/
+SourceTreeをダウンロードする。
+https://www.atlassian.com/ja/software/sourcetree/overview
+
 
