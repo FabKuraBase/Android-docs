@@ -18,4 +18,12 @@ Google Playでは、各アプリの表示はパッケージ名でおこなって
 
 ![Image0202](pre0202.png)
 
-![Image0202](pre0203.png)
+Phone and TabletnおMinimum SDKでは、サポートする最低レベルのAPIのバージョンを指定する。
+
+![Image0203](pre0203.png)
+
+どの画面を初期で呼び出すかは、テンプレートから選択する。今回は、Blank Activity を選択する。
+
+![Image0204](pre0204.png)
+
+
