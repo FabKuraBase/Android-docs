@@ -35,7 +35,6 @@ Phone and TabletnおMinimum SDKでは、サポートする最低レベルのAPI�
 | Title | アプリのタイトルを指定 |
 | Menu Resource Name: | Menuで表示するレイアウトのXMLのファイル名を指定
 
-
 ![Image0205](pre0205.png)
 
 
