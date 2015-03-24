@@ -38,3 +38,8 @@ Phone and TabletnおMinimum SDKでは、サポートする最低レベルのAPI�
 ![Image0205](pre0205.png)
 
 
+
+![Image0206](pre0206.png)
+
+
+
