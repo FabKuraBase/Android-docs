@@ -1,4 +1,5 @@
-# First Chapter
+# 環境設定
+## Android Studioのインストール
 
 Android Studioをダウンロードする。
 http://developer.android.com/sdk/index.html#top
@@ -10,3 +11,9 @@ http://developer.android.com/sdk/index.html#top
 Android Studio 1.0のインストール画面が表示されるので、Android StudioアイコンをApplicationsにドラッグ&ドロップする。
 
 ![Image001](app001.png)
+
+## Githubのインストール
+
+Githubをダウンロードする。
+https://mac.github.com/
+
