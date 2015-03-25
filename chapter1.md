@@ -17,7 +17,7 @@ Android Studio 1.0のインストール画面が表示されるので、Android 
 Android Studioを実行し、
 
 
-![](pre0104.png)
+![pre0104](pre0104.png)
 
 ## SourceTreeのインストール
 
