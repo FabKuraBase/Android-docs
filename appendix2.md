@@ -15,7 +15,7 @@ Devices|logcatを選択し、Devicesに端末が表示されていることを�
 ## Keyword
 キーワードを入れることで、キーワードに関連するログを表示できる。
 
-```
+```java
 Log.d("TEST","MESSAGE");
 ```
 
@@ -26,7 +26,7 @@ Log.d("TEST","MESSAGE");
 
 Log.d以外にも、下記の定義が可能。
 
-```
+```java
 Log.v("TEST","MESSAGE");
 Log.e("TEST","MESSAGE");
 Log.i("TEST","MESSAGE");
