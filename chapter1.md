@@ -6,7 +6,7 @@ http://developer.android.com/sdk/index.html#top
 
 ダウンロードした、dmgファイルを実行する。
 
-![Image000](app000.png)
+![Image000](pre0101.png)
 
 Android Studio 1.0のインストール画面が表示されるので、Android StudioアイコンをApplicationsにドラッグ&ドロップする。
 
