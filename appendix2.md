@@ -1,2 +1,2 @@
-# Appendix2.Logcarでログを見る
+# Appendix2.Logcatでログを見る
 
