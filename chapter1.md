@@ -6,11 +6,11 @@ http://developer.android.com/sdk/index.html#top
 
 ダウンロードした、dmgファイルを実行する。
 
-![Image000](pre0101.png)
+![pre0101](pre0101.png)
 
 Android Studio 1.0のインストール画面が表示されるので、Android StudioアイコンをApplicationsにドラッグ&ドロップする。
 
-![Image001](pre0.png)
+![pre0102](pre0102.png)
 
 ## SourceTreeのインストール
 
