@@ -14,7 +14,11 @@ Android Studio 1.0のインストール画面が表示されるので、Android 
 
 ## Android SDKのUpdate
 
-Android Studioを実行し、![](pre0103.png)
+Android Studioを実行し、SDK Managerを実行する。
+
+![pre0103](pre0103.png)
+
+SDK Managerで、Android SDK Tools, Android SDK Platform-toolsにUpdateのマークがでている事を確認し、[Install * packages...]を選択する。
 
 ![pre0104](pre0104.png)
 
