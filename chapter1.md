@@ -12,6 +12,10 @@ Android Studio 1.0のインストール画面が表示されるので、Android 
 
 ![pre0102](pre0102.png)
 
+## Android SDKのUpdate
+
+
+
 ## SourceTreeのインストール
 
 SourceTreeをダウンロードする。
