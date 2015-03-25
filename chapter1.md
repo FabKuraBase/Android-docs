@@ -14,8 +14,7 @@ Android Studio 1.0のインストール画面が表示されるので、Android 
 
 ## Android SDKのUpdate
 
-Android Studioを実行し、
-
+Android Studioを実行し、![](pre0103.png)
 
 ![pre0104](pre0104.png)
 
