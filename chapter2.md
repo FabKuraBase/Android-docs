@@ -132,7 +132,7 @@ activity_main.xml
 </RelativeLayout>
 ```
 
-menu_main.xml
+### res/menu/menu_main.xml
 ```xml
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
