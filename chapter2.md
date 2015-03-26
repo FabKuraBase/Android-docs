@@ -74,7 +74,7 @@ AndroidManifext.xml
 </manifest>
 ```
 
-MainActivity.java
+### MainActivity.java
 ```java
 package com.gclue.helloworld;
 
