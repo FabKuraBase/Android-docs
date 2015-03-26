@@ -6,7 +6,7 @@
 Control + Option + i
 ```
 
-### impoer
+### import
 
 
 ![](pre0407.png)
