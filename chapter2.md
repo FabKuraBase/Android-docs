@@ -117,7 +117,7 @@ public class MainActivity extends ActionBarActivity {
 }
 ```
 
-activity_main.xml
+## res/layout/activity_main.xml
 ```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
