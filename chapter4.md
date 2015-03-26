@@ -76,7 +76,28 @@ public class MainActivity extends ActionBarActivity {
 
 ```
 
+Logクラスを用いてログを出力する。1つ目の引数にキーワード、2つ目の引数に出力する値を指定する。
+
+```java
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // ① Logを出力
+        Log.i("ACTIVITY", "onCreate()"); 
+    }
+```
+
+Log.iと記載すると、Logの下に赤線が出力され、エラーが発生する。これはLogクラスがImportされていない事に起因するエラーであるLogの赤線の上に、マウスポインタを移動する。
+
 ![](pre0407.png)
+
+Logにマウスポインタを移動している状態で、alt + Enterを押すと、Logクラスのimport文が自動的に追加される。
+
+```
+alt + Enter
+```
 
 ![](pre0408.png)
 
