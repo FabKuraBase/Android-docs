@@ -99,7 +99,6 @@ Logにマウスポインタを移動している状態で、alt + Enterを押す
 alt + Enter
 ```
 
-![](pre0408.png)
 
 ## onStart()
 
