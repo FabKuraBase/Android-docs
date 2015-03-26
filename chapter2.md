@@ -294,6 +294,7 @@ res/values/strings.xml
 </resources>
 ```
 
+"action_setting"の項目をSetting→Exitに修正する。
 
 
 
