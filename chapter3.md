@@ -72,6 +72,8 @@ public class MainActivity extends Activity {
 
 ## Service
 
+![](pre0303.png)
+
 AndroidManifest.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
