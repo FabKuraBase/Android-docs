@@ -5,7 +5,7 @@ Androidでは、画面のあるアプリケーションを開発する場合は�
 ![](pre0301.jpg)
 
 ## Activity
-
+![](pre0302.png)
 AndroidManifest.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
