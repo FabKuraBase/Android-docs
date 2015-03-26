@@ -15,6 +15,12 @@ Application nameを設定し、[Next]ボタンを押す。
 
 ![](pre0403.png)
 
+Minimum SDKのAPIバージョンを設定する。
+
 ![](pre0404.png)
 
+ActivityはBlack Activityを選択する。
+
 ![](pre0405.png)
+
+![](pre0406.png)
