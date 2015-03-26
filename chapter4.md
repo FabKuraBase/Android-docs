@@ -3,27 +3,27 @@
 Activityの始まりから終わりまでの、ライフサイクルの解説をおこなう。
 
 
-![](pre0401.png)
+![](chapter4/pre0401.png)
 
 ## 新規プロジェクトの作成
 
 [File]-[New Project]を選択し、新しいプロジェクトを作成する。
 
-![](pre0402.png)
+![](chapter4/pre0402.png)
 
 Application nameを設定し、[Next]ボタンを押す。
 
-![](pre0403.png)
+![](chapter4/pre0403.png)
 
 Minimum SDKのAPIバージョンを設定する。
 
-![](pre0404.png)
+![](chapter4/pre0404.png)
 
 ActivityはBlack Activityを選択する。
 
-![](pre0405.png)
+![](chapter4/pre0405.png)
 
-![](pre0406.png)
+![](chapter4/pre0406.png)
 
 ## onCreate() 省略不可
 
@@ -98,27 +98,27 @@ Logにマウスポインタを移動している状態で、alt + Enterを押す
 ```
 alt + Enter
 ```
-![](pre0408.png)
+![](chapter4/pre0408.png)
 
 ログの出力を確認する。ログはAndroid DDMSを用いて表示する。Studioの下に表示されているAndroidタブを選択する。
 
-![](pre0409.png)
+![](chapter4/pre0409.png)
 
 これでログ画面が表示されるようになる。
 
-![](pre0410.png)
+![](chapter4/pre0410.png)
 
 次に端末に接続する。
 
-![](pre0411.png)
+![](chapter4/pre0411.png)
 
 表示するログを今起動中のアプリだけにするために、Filterで自分のアプリのパッケージ名を選択する。
 
-![](pre0412.png)
+![](chapter4/pre0412.png)
 
 キーワードにLIFEといれ、表示するログを絞る。
 
-![](pre0413.png)
+![](chapter4/pre0413.png)
 
 ## onCreate()以外も実装する
 
@@ -257,8 +257,8 @@ public class MainActivity extends ActionBarActivity {
 ```
 
 起動すると、
-![](pre0414.png)
+![](chapter4/pre0414.png)
 
 終了すると、
-![](pre0415.png)
+![](chapter4/pre0415.png)
 
