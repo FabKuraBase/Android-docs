@@ -7,5 +7,6 @@
 * [Activityのライフサイクル](chapter4.md)
 * [Appendix1.USBデバックモードを有効にする](appendix1.md)
 * [Appendix2.Logcatでログを見る](appendix2.md)
+* [Appendix3.ショートカットキー](appendix3.md)
 * [リンク](link.md)
 
