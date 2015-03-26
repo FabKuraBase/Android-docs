@@ -3,6 +3,6 @@
 ###コードのインデント整形
 
 ```
-Control+Option+i
+Control + Option + i
 ```
 
