@@ -101,3 +101,6 @@ alt + Enter
 
 ![](pre0408.png)
 
+## onStart()
+
+
