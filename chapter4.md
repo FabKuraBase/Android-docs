@@ -257,6 +257,7 @@ public class MainActivity extends ActionBarActivity {
 ```
 
 起動すると、
+![](pre0414.png)
 
 終了すると、
 ![](pre0415.png)
