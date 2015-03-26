@@ -144,5 +144,56 @@ public class MainService extends Service {
 
 ```
 
+## Broadcast Receiver
+
+
+AndroidManifest.xml
+```
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.service"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        
+        <receiver android:name="MainReceiver">
+            <intent-filter>
+                <action android:name="com.example.TEST" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
+```
+
+MainReceiver.java
+```java
+package com.example.service;
+ 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.widget.Toast;
+ 
+/**
+ * Broadcast Receiver
+ */
+public class MainReceiver extends BroadcastReceiver {
+  
+	@Override
+	public void onReceive(Context context,Intent intent) {				
+	}
+}
+```
+
+```
+public class MainReceiver extends BroadcastReceiver {
+```
+
 
 
