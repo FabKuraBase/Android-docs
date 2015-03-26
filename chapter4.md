@@ -47,7 +47,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         // ① Logを出力
-        Log.i("ACTIVITY", "onCreate()"); 
+        Log.i("LIFE", "onCreate()");
     }
 
 
@@ -85,7 +85,7 @@ Logクラスを用いてログを出力する。1つ目の引数にキーワー�
         setContentView(R.layout.activity_main);
 
         // ① Logを出力
-        Log.i("ACTIVITY", "onCreate()"); 
+        Log.i("LIFE", "onCreate()");
     }
 ```
 
