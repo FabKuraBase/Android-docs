@@ -152,7 +152,7 @@ strings.xml
 </resources>
 ```
 
-styles.xml
+### res/values/styles.xml
 ```xml
 <resources>
 
@@ -164,7 +164,7 @@ styles.xml
 </resources>
 ```
 
-build.gradle(Project: HelloWorld)
+### build.gradle(Project: HelloWorld)
 ```
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
@@ -187,7 +187,7 @@ allprojects {
 }
 ```
 
-build.gradle(Module: app)
+### build.gradle(Module: app)
 ```
 apply plugin: 'com.android.application'
 
@@ -228,6 +228,8 @@ dependencies {
 
 ## メニューからアプリを終了
 
+
+### MainActivity.java
 ```java
 package com.gclue.helloworld;
 
@@ -284,7 +286,7 @@ finish()を呼び出すと、アプリは終了する。
         }
 ```
 
-res/values/strings.xml
+### res/values/strings.xml
 ```xml
 <resources>
     <string name="app_name">HelloWorld</string>
