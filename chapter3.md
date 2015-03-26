@@ -4,3 +4,26 @@ Androidでは、画面のあるアプリケーションを開発する場合は�
 
 ![](pre0301.jpg)
 
+## Activity
+
+
+
+MainActivity.java
+```java
+package com.gclue.activitysample;
+
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+
+
+public class MainActivity extends ActionBarActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}
+```
