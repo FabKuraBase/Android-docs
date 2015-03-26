@@ -1,9 +1,9 @@
 # Appendix3.ショートカットキー
 
-###コードのインデント整形
+### コードのインデント整形
 
 ```
-Control + Option + i
+control + option + i
 ```
 
 ### import
@@ -18,3 +18,9 @@ alt + Enter
 ```
 
 ![](pre0408.png)
+
+### コードを全文選択
+
+```
+option + a
+```
