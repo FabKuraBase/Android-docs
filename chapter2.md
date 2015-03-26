@@ -142,7 +142,7 @@ menu_main.xml
 </menu>
 ```
 
-strings.xml
+### res/values/strings.xml
 ```xml
 <resources>
     <string name="app_name">HelloWorld</string>
