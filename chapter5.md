@@ -135,6 +135,74 @@ MyViewのインスタンスを生成して、Windows.setContentView()でWindow�
 
 ## 線を引く
 
+MyView.java
+```java
+package com.gclue.viewsample;
 
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.view.View;
 
+/**
+ * 描画用のクラス.
+ */
+class MyView extends View {
 
+    /**
+     * コンストラクタ.
+     *
+     * @param context コンテキスト
+     */
+    public MyView(Context context) {
+        super(context);
+        setFocusable(true);
+
+    }
+
+    /**
+     * 描画処理を行う.
+     */
+    @Override
+    protected void onDraw(Canvas canvas ) {
+        super.onDraw(canvas);
+
+        // 背景色を設定.
+        canvas.drawColor(Color.BLUE);
+
+        // 描画するための線の色を設定.
+        Paint mPaint = new Paint();
+        mPaint.setStyle( Paint.Style.FILL );
+        mPaint.setARGB( 255, 255, 255, 100 );
+
+        // 線で描画.
+        canvas.drawLine( 0, 0, 50, 50, mPaint );
+
+    }
+}
+```
+
+```java
+        // 描画するための線の色を設定.
+        Paint mPaint = new Paint();
+        mPaint.setStyle( Paint.Style.FILL );
+        mPaint.setARGB( 255, 255, 255, 100 );
+
+        // 線で描画.
+        canvas.drawLine( 0, 0, 50, 50, mPaint );
+```
+
+赤い太線を(0,0)-(500,500)に引く
+```java
+        // 描画するための線の色を設定.
+        Paint mPaint = new Paint();
+        mPaint.setStyle( Paint.Style.FILL );
+        mPaint.setStrokeWidth(10);
+        mPaint.setARGB( 255, 255, 0, 0 );
+
+        // 線で描画.
+        canvas.drawLine( 0, 0, 500, 500, mPaint );
+```
+
+## 文字列の描画
