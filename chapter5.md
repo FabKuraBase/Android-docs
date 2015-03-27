@@ -30,7 +30,7 @@ ActivityはBlack Activityを選択する。
 
 ## Viewを継承したクラスの作成
 
-パッケージ名である、com.gclue.viewsampleの
+パッケージ名の上で、CTRL + 右クリックでショートカットメニューを表示する。
 
 ![](chapter5/pre0507.png)
 
