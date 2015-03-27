@@ -299,7 +299,7 @@ class MyView extends View {
         mPaint.setStyle( Paint.Style.FILL );
         mPaint.setARGB( 255, 255, 0, 0 );
 
-        // 文字を描画.
+        // 四角を描画.
         canvas.drawRect(50, 100, 200, 250, mPaint);
 
     }
@@ -313,7 +313,7 @@ class MyView extends View {
         mPaint.setStyle( Paint.Style.STROKE );
         mPaint.setARGB( 255, 255, 0, 0 );
 
-        // 文字を描画.
+        // 四角を描画.
         canvas.drawRect(50, 100, 200, 250, mPaint);
 ```
 
@@ -360,7 +360,7 @@ class MyView extends View {
         mPaint.setStyle( Paint.Style.FILL );
         mPaint.setARGB( 255, 255, 0, 0 );
 
-        // 文字を描画.
+        // 円を描画.
         canvas.drawCircle( 500, 500, 200, mPaint );
 
     }
@@ -410,7 +410,7 @@ class MyView extends View {
         mPaint.setStyle( Paint.Style.FILL );
         mPaint.setARGB( 255, 255, 0, 0 );
 
-        // 文字を描画.
+        // 点を描画.
         canvas.drawPoint( 200, 200, mPaint );
     }
 }
