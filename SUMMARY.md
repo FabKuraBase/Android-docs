@@ -8,5 +8,6 @@
 * [Appendix1.USBデバックモードを有効にする](appendix1.md)
 * [Appendix2.Logcatでログを見る](appendix2.md)
 * [Appendix3.ショートカットキー](appendix3.md)
+* [Appendix4.Androidの歴史](appendix4.md)
 * [リンク](link.md)
 
