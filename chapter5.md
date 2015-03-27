@@ -420,6 +420,10 @@ class MyView extends View {
 
 ![](pre0509.png)
 
+![](pre0510.png)
+
+![](pre0511.png)
+
 MyView.java
 ```java
 package com.gclue.viewsample;
