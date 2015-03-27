@@ -25,21 +25,23 @@
 ## Android 2.3 Gingerbread
 2010年12月6日
 
+![](app0305.JPG)
 
 ## Android 3.x Honeycomb
 2011年2月22日
 
+![](app0306.JPG)
 
 ## Android 4.0 Ice Cream Sandwich
 2011年10月18日
 
+![](app0307.JPG)
 
 ## Android 4.1/4.2/4.3 Jelly Bean
 2012年6月27日
 
-![](app0306.JPG)
+
 
 ## Android 4.4 KitKat
 2013年10月31日
 
-![](app0307.JPG)
