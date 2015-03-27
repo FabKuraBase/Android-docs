@@ -8,6 +8,7 @@
 * [Viewでの描画処理](chapter5.md)
 * [タッチイベント](chapter6.md)
 * [音の再生](chapter7.md)
+* [太鼓アプリの作成](chapter8.md)
 * [Appendix1.USBデバックモードを有効にする](appendix1.md)
 * [Appendix2.Logcatでログを見る](appendix2.md)
 * [Appendix3.ショートカットキー](appendix3.md)
