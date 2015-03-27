@@ -28,3 +28,7 @@ ActivityはBlack Activityを選択する。
 
 ![](chapter5/pre0506.png)
 
+## Viewを継承したクラスの作成
+
+
+
