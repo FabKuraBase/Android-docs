@@ -420,7 +420,7 @@ class MyView extends View {
 
 ## 画像の描画
 
-![](chapter5/gclue_logo.gif)
+![](gcluelogo.gif)
 gclue_logo.gif
 
 ダウンロードした、gclue_logo.gifを選択し、CTRL + 右クリックで表示されるシュートカットメニューで、gclue_logo.gifのコピーを選ぶ。
