@@ -1,6 +1,10 @@
 # Viewでの描画処理
+<<<<<<< HEAD
 ## First
 aaa
+=======
+
+>>>>>>> origin/master
 ## WindowとView
 
 Androidでは、Activityを継承したクラスは、Windoowを保持する。WindowにViewを貼り付ける事で、描画関連の処理をおこなう事ができる。
