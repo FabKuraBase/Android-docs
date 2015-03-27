@@ -37,6 +37,8 @@
 ## Android 4.1/4.2/4.3 Jelly Bean
 2012年6月27日
 
+![](app0306.JPG)
+
 ## Android 4.4 KitKat
 2013年10月31日
 
