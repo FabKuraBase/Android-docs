@@ -495,4 +495,101 @@ class MyView extends View {
 ##  四隅をとる
 
 
+MyView.java
+```java
+package com.gclue.viewsample;
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.util.Log;
+import android.view.View;
+
+/**
+ * 描画用のクラス.
+ */
+class MyView extends View {
+
+    /**
+     * 画像を格納する変数.
+     */
+    private Bitmap myBitmap;
+
+    /**
+     * ① タグ. 
+     */
+    private final static String TAG = "DRAW";
+
+    /**
+     * コンストラクタ.
+     *
+     * @param context コンテキスト
+     */
+    public MyView(Context context) {
+        super(context);
+        setFocusable(true);
+
+        // Resourceインスタンスの生成
+        Resources res = this.getContext().getResources();
+        // 画像の読み込み(res/drawable/gclue_logo.gif)
+        myBitmap = BitmapFactory.decodeResource(res, R.drawable.gclue_logo);
+    }
+
+    /**
+     * 描画処理を行う.
+     */
+    @Override
+    protected void onDraw(Canvas canvas ) {
+        super.onDraw(canvas);
+
+        // 背景色を設定.
+        canvas.drawColor(Color.BLUE);
+
+        // 描画するための線の色を設定.
+        Paint mPaint = new Paint();
+        mPaint.setStyle( Paint.Style.FILL );
+        mPaint.setARGB( 255, 255, 0, 0 );
+
+        // Bitmapイメージの描画.
+        canvas.drawBitmap(myBitmap, 0, 0, mPaint);
+        
+        // ② 四隅をとる.
+        int viewWidth = this.getWidth();
+        int viewHeight = this.getHeight();
+        int imgWidth = myBitmap.getWidth();
+        int imgHeight = myBitmap.getHeight();
+
+        Log.i(TAG, "viewWidth:" + viewWidth);
+        Log.i(TAG, "viewHeight:" + viewHeight);
+        Log.i(TAG, "imgWidth:" + imgWidth);
+        Log.i(TAG, "imgHeight:" + imgHeight);
+
+    }
+}
+```
+
+```java
+    /**
+     * ① タグ. 
+     */
+    private final static String TAG = "DRAW";
+```
+
+```java
+   // ② 四隅をとる.
+        int viewWidth = this.getWidth();
+        int viewHeight = this.getHeight();
+        int imgWidth = myBitmap.getWidth();
+        int imgHeight = myBitmap.getHeight();
+
+        Log.i(TAG, "viewWidth:" + viewWidth);
+        Log.i(TAG, "viewHeight:" + viewHeight);
+        Log.i(TAG, "imgWidth:" + imgWidth);
+        Log.i(TAG, "imgHeight:" + imgHeight);
+```
+
 
