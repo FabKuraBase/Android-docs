@@ -262,4 +262,4 @@ public class MainActivity extends ActionBarActivity {
 終了すると、
 ![](chapter4/pre0415.png)
 
-![](pre0416.png)
+![](chapter4/pre0416.png)
