@@ -418,20 +418,20 @@ class MyView extends View {
 
 ## 画像の描画
 
-![](gclue_logo.gif)
+![](chapter5/gclue_logo.gif)
 gclue_logo.gif
 
 ダウンロードした、gclue_logo.gifを選択し、CTRL + 右クリックで表示されるシュートカットメニューで、gclue_logo.gifのコピーを選ぶ。
 
-![](pre0509.png)
+![](chapter5/pre0509.png)
 
 Studioのdrawableを選択し、その上でCTRL + 右クリックを押して表示されるショートカットメニューからPasteを選択する。
 
-![](pre0510.png)
+![](chapter5/pre0510.png)
 
 コピー先フォルサを確認し、[OK]でコピーする。
 
-![](pre0511.png)
+![](chapter5/pre0511.png)
 
 MyView.java
 ```java
