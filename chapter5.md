@@ -1,6 +1,5 @@
 # Viewでの描画処理
 
-TESTqqqq
 
 ## WindowとView
 
