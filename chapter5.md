@@ -1,6 +1,4 @@
 # Viewでの描画処理
-## First
-TEST
 
 ## WindowとView
 
