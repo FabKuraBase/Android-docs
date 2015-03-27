@@ -30,5 +30,111 @@ ActivityはBlack Activityを選択する。
 
 ## Viewを継承したクラスの作成
 
+パッケージ名である、com.gclue.viewsampleの
+
+![](chapter5/pre0507.png)
+
+![](chapter5/pre0508.png)
+
+MyView.java
+```
+package com.gclue.viewsample;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.view.View;
+
+/**
+ * 描画用のクラス.
+ */
+class MyView extends View {
+
+    /**
+     * コンストラクタ.
+     *
+     * @param context コンテキスト
+     */
+    public MyView(Context context) {
+        super(context);
+        setFocusable(true);
+
+    }
+
+    /**
+     * 描画処理を行う.
+     */
+    @Override
+    protected void onDraw(Canvas canvas ) {
+        super.onDraw(canvas);
+
+        // 背景色を設定
+        canvas.drawColor(Color.BLUE);
+
+    }
+}
+```
+
+MainActivity.java
+```java
+package com.gclue.viewsample;
+
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+
+public class MainActivity extends ActionBarActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // ① MyViewのインスタンスを生成.
+        MyView mView = new MyView(this);
+
+        // ② mViewをWindowに貼り付け.
+        setContentView(mView);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+```
+
+MyViewのインスタンスを生成して、Windows.setContentView()でWindowに貼り付る。
+
+```java
+        // ① MyViewのインスタンスを生成.
+        MyView mView = new MyView(this);
+
+        // ② mViewをWindowに貼り付け.
+        setContentView(mView);
+```
+
+## 線を引く
+
+
 
 
