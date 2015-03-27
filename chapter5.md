@@ -206,3 +206,115 @@ class MyView extends View {
 ```
 
 ## 文字列の描画
+
+```java
+package com.gclue.viewsample;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.view.View;
+
+/**
+ * 描画用のクラス.
+ */
+class MyView extends View {
+
+    /**
+     * コンストラクタ.
+     *
+     * @param context コンテキスト
+     */
+    public MyView(Context context) {
+        super(context);
+        setFocusable(true);
+
+    }
+
+    /**
+     * 描画処理を行う.
+     */
+    @Override
+    protected void onDraw(Canvas canvas ) {
+        super.onDraw(canvas);
+
+        // 背景色を設定.
+        canvas.drawColor(Color.BLUE);
+
+        // 描画するための線の色を設定.
+        Paint mPaint = new Paint();
+        mPaint.setStyle( Paint.Style.FILL );
+        mPaint.setTextSize(100);
+        mPaint.setARGB( 255, 255, 0, 0 );
+
+        // 文字を描画.
+        canvas.drawText( "HELLO ANDROID", 20, 500, mPaint );
+
+    }
+}
+```
+
+
+## 四角形の描画
+
+MyView.java
+```java
+package com.gclue.viewsample;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.view.View;
+
+/**
+ * 描画用のクラス.
+ */
+class MyView extends View {
+
+    /**
+     * コンストラクタ.
+     *
+     * @param context コンテキスト
+     */
+    public MyView(Context context) {
+        super(context);
+        setFocusable(true);
+
+    }
+
+    /**
+     * 描画処理を行う.
+     */
+    @Override
+    protected void onDraw(Canvas canvas ) {
+        super.onDraw(canvas);
+
+        // 背景色を設定.
+        canvas.drawColor(Color.BLUE);
+
+        // 描画するための線の色を設定.
+        Paint mPaint = new Paint();
+        mPaint.setStyle( Paint.Style.FILL );
+        mPaint.setARGB( 255, 255, 0, 0 );
+
+        // 文字を描画.
+        canvas.drawRect(50, 100, 200, 250, mPaint);
+
+    }
+}
+```
+
+中塗りしない。
+```java
+        // 描画するための線の色を設定.
+        Paint mPaint = new Paint();
+        mPaint.setStyle( Paint.Style.STROKE );
+        mPaint.setARGB( 255, 255, 0, 0 );
+
+        // 文字を描画.
+        canvas.drawRect(50, 100, 200, 250, mPaint);
+```
+
+
