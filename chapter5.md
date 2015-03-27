@@ -8,5 +8,23 @@ Androidでは、Activityを継承したクラスは、Windoowを保持する。W
 
 Viewクラスを継承したクラスは、Window.setContentView() または、Window.addContentView()で、Windowに貼り付けられる。
 
-## 独自のViewを作成する
+## 新規プロジェクトの作成
+
+[File]-[New Project]を選択し、新しいプロジェクトを作成する。
+
+![](chapter5/pre0502.png)
+
+Application nameを設定し、[Next]ボタンを押す。
+
+![](chapter5/pre0503.png)
+
+Minimum SDKのAPIバージョンを設定する。
+
+![](chapter5/pre0504.png)
+
+ActivityはBlack Activityを選択する。
+
+![](chapter5/pre0505.png)
+
+![](chapter5/pre0506.png)
 
