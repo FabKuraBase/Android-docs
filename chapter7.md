@@ -26,7 +26,9 @@ res/rawディレクトリの上で、CTRL + 右クリックで表示されるシ
 
 ![](chapter7/pre0705.png)
 
-# 音の再生
+# 音の再生(短い音)
+
+![](chapter7/pre0706.png)
 
 MyView.java
 
@@ -140,5 +142,12 @@ class MyView extends View {
     }
 }
 ```
+## 音の再生(長い音)
+
+koto.wavをダウンロードし、Android Studioのres/rawフォルダにコピーする。
+
+[koto.wav](https://github.com/FabKuraBase/Android-docs/blob/master/res/koto.wav)
+
+
 
 
