@@ -14,5 +14,6 @@
 * [Appendix3.ショートカットキー](appendix3.md)
 * [Appendix4.Androidの歴史](appendix4.md)
 * [Appendix5.SourceTreeとGithub](appendix5.md)
+* [Appendix6.GithubのPullrequest](appendix5.md)
 * [リンク](link.md)
 
