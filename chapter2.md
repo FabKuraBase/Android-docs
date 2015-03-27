@@ -4,7 +4,7 @@
 
 Android Studioを起動して、"Start a new Android Studio project"を選択する。
 
-![Image0201](pre0201.png)
+![Image0201](chapter2/pre0201.png)
 
 "Create New Project"ダイアログボックスで、Application nameとCompany Domain:を入力する。入力した値は、Package nameの欄にも反映される。
 
@@ -16,15 +16,15 @@ Google Playでは、各アプリの表示はパッケージ名でおこなって
 
 また、Project locationでは、プロジェクトを保存する場所を選択する。Macの場合、Document以下にworkspace_プロジェクト名という感じにおくと良い(ここは個人の好み、ルールに従う)。
 
-![Image0202](pre0202.png)
+![Image0202](chapter2/pre0202.png)
 
 Phone and TabletnおMinimum SDKでは、サポートする最低レベルのAPIのバージョンを指定する。
 
-![Image0203](pre0203.png)
+![Image0203](chapter2/pre0203.png)
 
 どの画面を初期で呼び出すかは、テンプレートから選択する。今回は、Blank Activity を選択する。
 
-![Image0204](pre0204.png)
+![Image0204](chapter2/pre0204.png)
 
 最後に、Activity Name等を確認し、[Finish]を押す。
 
@@ -46,7 +46,7 @@ Phone and TabletnおMinimum SDKでは、サポートする最低レベルのAPI�
 |⑤| build.gradle |
 |⑥| build.gradle |
 
-![Image0206](pre0206.png)
+![Image0206](chapter2/pre0206.png)
 
 
 AndroidManifext.xml
@@ -218,13 +218,13 @@ dependencies {
 
 ## Build
 
-![](pre0207.png)
+![](chapter2/pre0207.png)
 <br>
 <br>
-![](pre0208.png)
+![](chapter2/pre0208.png)
 
 
-![](pre02091.png)
+![](chapter2/pre0209.png)
 
 ## メニューからアプリを終了
 
