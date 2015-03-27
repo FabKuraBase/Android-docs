@@ -418,6 +418,8 @@ class MyView extends View {
 
 ## 画像の描画
 
+![](pre0509.png)
+
 MyView.java
 ```java
 package com.gclue.viewsample;
@@ -476,5 +478,8 @@ class MyView extends View {
     }
 }
 ```
+
+##  四隅をとる
+
 
 
