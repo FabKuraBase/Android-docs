@@ -9,7 +9,7 @@
 ## Android 1.5 Cupcake
 2009年4月30日
 
-![](app0301.JPG)
+![](app0301![](app0301.JPG).JPG)
 
 ## Android  1.6 Donuts
 2009年9月15日
