@@ -9,7 +9,7 @@ control + option + i
 ### import
 
 
-![](pre0407.png)
+![](chapter4/pre0407.png)
 
 エラー箇所の上で、alt + Enterを押すと、クラスのimport文が自動的に追加される。
 
@@ -17,7 +17,7 @@ control + option + i
 alt + Enter
 ```
 
-![](pre0408.png)
+![](chapter4/pre0408.png)
 
 ### コードを全文選択
 
