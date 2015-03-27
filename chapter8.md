@@ -15,19 +15,145 @@
 
 TaikoAppというプロジェクト名のアプリを作成する。
 
+taiko.pngをres/drawableに、pon.wavをres/rawにコピーする。
+
+![](chapter8/pre0810.png)
+
+MainActivity.java
+```java
+package com.gclue.taicoapp;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // TaikoViewのインスタンス化.
+        TaikoView mTaikoView = new TaikoView(this);
+
+        // TaikoViewを画面に設定.
+        setContentView(mTaikoView);
+    }
 
 
-## 太鼓画像の座標を取得
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        /*
+        Handle action bar item clicks here. The action bar will
+        automatically handle clicks on the Home/Up button, so long
+        as you specify a parent activity in AndroidManifest.xml.
+        */
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}
+
+
+```
+
+TaikoView.java
+```java
+package com.gclue.taicoapp;
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.view.View;
+
+/**
+ * 太鼓の画像を表示するView.
+ */
+class TaikoView extends View {
+
+    /** 太鼓画像データを保持する. */
+    private Bitmap mTaikoImage;
+
+    /** 太鼓画像の原点（左上）のx座標を保持する. */
+    private int mTaikoX = 100;
+
+    /** 太鼓画像の原点（左上）のy座標を保持する. */
+    private int mTaikoY = 50;
+
+    /**
+     * コンストラクタ.
+     * @param context コンテキスト
+     */
+    public TaikoView( Context context ) {
+        super(context);
+
+        // イベント取得できるようにFocusを有効にする.
+        setFocusable( true );
+
+        // Resourceインスタンスの生成.
+        Resources res = this.getContext().getResources();
+
+        // 画像の読み込み（/res/drawable/taiko.png）.
+        mTaikoImage = BitmapFactory.decodeResource(res, R.drawable.taiko);
+    }
+
+    /**
+     * 描画処理.
+     */
+    @Override
+    protected void onDraw( Canvas canvas ) {
+
+        // 背景色を設定する.
+        canvas.drawColor( Color.BLACK );
+
+        // Bitmapイメージの描画.
+        Paint mPaint = new Paint();
+        canvas.drawBitmap( mTaikoImage, mTaikoX, mTaikoY, mPaint );
+    }
+}
+```
+
 ![](chapter8/pre0803.png)
 
 ![](chapter8/pre0804.png)
 
 ## あたり判定
-
+太鼓の中心点を求める数式
+```
+int mCenterX = mTaikoX + mTaikoImage.getWidth()/2;
+int mCenterY = mTaikoY + mTaikoImage.getHeight()/2;
+```
 ![](chapter8/pre0805.png)
+
+半径Rを求める数式
+```
+int mTaikoR = taikoImage.getWidth() / 2;
+```
 
 ![](chapter8/pre0806.png)
 
+太鼓の中心点とタッチした座標の距離を求める数式
+```
+double distance = Math.sqrt( Math.pow( (mCenterX - mTouchX), 2 ) + Math.pow( (mCenterY - mTouchY), 2 ));
+```
+太鼓に手があたっていない場合の条件
+
 ![](chapter8/pre0807.png)
+
+太鼓に手があたっている場合の条件
 
 ![](chapter8/pre0808.png)
