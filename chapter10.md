@@ -1,8 +1,7 @@
 # ピアノアプリの作成(2)
 
 ## 曲選択画面用Activityの作成
-
-
+![](chapter10/pre1001.png)
 
 listview_main.xml
 ```xml
