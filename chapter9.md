@@ -274,6 +274,10 @@ activity_main.xml
 
 ## 音の組み込みと鍵盤の配色
 
+
+![](chapter9/pre0901.png)
+
+
 MainActivty.java
 ```java
 package com.gclue.mypiano;
@@ -526,7 +530,10 @@ activity_main.xml
 </RelativeLayout>
 ```
 
-res/layout/drawable.xml
+
+![](chapter9/pre0902.png)
+
+res/drawable/kenban.xml
 ```java
 <?xml version="1.0" encoding="utf-8" ?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
