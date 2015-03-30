@@ -7,7 +7,7 @@ MyPianoという名前で、新規プロジェクトを作成する。
 ## ボタンイベントの実装
 
 MainActivity.java
-```
+```java
 package com.gclue.mypiano;
 
 import android.app.Activity;
@@ -47,7 +47,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 ```
 
 activity_main.xml
-```
+```java
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -71,7 +71,7 @@ activity_main.xml
 ## ボタンを配置
 
 MainActivity.java
-```
+```java
 package com.gclue.mypiano;
 
 import android.app.Activity;
@@ -188,7 +188,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 ```
 
 activity_main.xml
-```
+```java
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -275,7 +275,7 @@ activity_main.xml
 ## 音の組み込みと鍵盤の配色
 
 MainActivty.java
-```
+```java
 package com.gclue.mypiano;
 
 import android.app.Activity;
@@ -427,7 +427,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 ```
 
 activity_main.xml
-```
+```java
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -527,7 +527,7 @@ activity_main.xml
 ```
 
 res/layout/drawable.xml
-```
+```java
 <?xml version="1.0" encoding="utf-8" ?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="false">
@@ -543,7 +543,7 @@ res/layout/drawable.xml
 ## 配列を使ってわかりやすくする
 
 MainActivity.java
-```
+```java
 package com.gclue.mypiano;
 
 import android.app.Activity;
