@@ -619,3 +619,574 @@ public class MainActivity extends Activity implements View.OnClickListener {
 }
 ```
 
+## 自動演奏機能
+
+
+MainActivity.java
+```java
+package com.gclue.mypiano;
+
+import android.app.Activity;
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+
+import java.util.ArrayList;
+
+
+public class MainActivity  extends Activity implements View.OnClickListener {
+
+    /** Button配列の定義。 */
+    private ArrayList<Button> buttons = new ArrayList< Button >();
+    /** サウンド配列の定義。 */
+    private ArrayList<MediaPlayer> sounds = new ArrayList< MediaPlayer >();
+    /** /res/layout/pianosample001_layout.xmlに記述したボタンの数。 */
+    private int howManyButtons = 8;
+
+    /** Data. */
+    private int[] mMerody = {0,1,2,1,2,3,1,2,3,1,2,3};
+    /** Button play. */
+    private Button mButtonPlay;
+
+    @Override
+    public void onCreate( Bundle savedInstanceState ) {
+        super.onCreate( savedInstanceState );
+        requestWindowFeature( Window.FEATURE_NO_TITLE );
+        setContentView( R.layout.activity_main );
+
+        // Play Button
+        mButtonPlay = (Button)findViewById(R.id.buttonPlay);
+        mButtonPlay.setOnClickListener( this );
+
+        // /res/layout/pianosample_layout.xml に記述したボタンを読み込む
+        addButtonAndSound(howManyButtons);
+    }
+
+    /**
+     * ボタンをボタン配列に、サウンドをサウンド配列に格納する。
+     * @param num ボタンの数
+     */
+    private void addButtonAndSound( int num ) {
+        for ( int i = 0; i < num; i++ ) {
+            String n = Integer.toString( i + 1 );
+
+            // ボタンをボタン配列に格納する
+            int buttonId = getResources().getIdentifier( "button" + n, "id", getPackageName() );
+            Button mButton = (Button) findViewById( buttonId );
+            mButton.setOnClickListener( this );
+            buttons.add( mButton );
+
+            // サウンドをサウンド配列に格納する
+            // サウンドファイルがsound01のように、0が付いた2桁表示になっているため、数値の頭に0を付けた文字列を作成する
+            if ( i < 10 ) {
+                n = "0" + n;
+            }
+            int soundId = getResources().getIdentifier( "sound" + n, "raw", getPackageName() );
+
+            MediaPlayer sound = MediaPlayer.create( this, soundId );
+            sounds.add( sound );
+        }
+    }
+
+    /**
+     * コンポーネントがクリックされると呼び出される。
+     */
+    @Override
+    public void onClick( View mView ) {
+        if(mView.equals(mButtonPlay)) {
+
+            for(int i = 0; i < mMerody.length; i++) {
+                int onkai = mMerody[i];
+                sounds.get(onkai).seekTo(0);
+                sounds.get(onkai).start();
+
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        } else {
+            // button配列に格納してあるButtonを一つずつ取り出し、クリックされたView(mView)とButtonが一致した場合、音を再生する。
+            for (int i = 0; i < howManyButtons; i++) {
+                if (mView.equals(buttons.get(i))) {
+                    Log.i("PIANO", "Button" + Integer.toString(i + 1) + "がクリックされました。");
+                    sounds.get(i).seekTo(0);
+                    sounds.get(i).start();
+                    return;
+                }
+            }
+        }
+    }
+}
+```
+
+activity_main.xml
+```java
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".PianoSample001" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/kenban"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/kenban"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button2"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/kenban"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button3"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/kenban"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button4"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/kenban"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button5"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/kenban"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button6"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/kenban"
+        android:text="" />
+
+
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button7"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/kenban"
+        android:text="" />
+
+
+    <Button
+        android:id="@+id/buttonPlay"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button8"
+        android:layout_marginTop="10dp"
+        android:text="play" />
+
+</RelativeLayout>
+```
+
+## JSON配列による演奏
+
+JSON Format
+```
+{"title" : "MySound",
+"data" : [
+ {"merody" : 0, "time" : 500},
+     {"merody" : 1, "time" : 500},
+        {"merody" : 2, "time" : 500},
+        {"merody" : 1, "time" : 500},
+        {"merody" : 2, "time" : 300},
+        {"merody" : 3, "time" : 100},
+        {"merody" : 1, "time" : 500},
+        {"merody" : 2, "time" : 300},
+        {"merody" : 3, "time" : 100},
+        {"merody" : 1, "time" : 500},
+        {"merody" : 2, "time" : 300},
+        {"merody" : 3, "time" : 100},
+]}
+```
+
+### 基本構文
+```
+{"項目名":"項目"}
+
+{"項目名1":"項目1",
+"項目名2":"項目2"}
+
+{"項目名1":"項目1",
+"項目名2":[ {"項目名":"項目2-1"},{"項目名":"項目2-2"}]
+}
+```
+
+### for example
+```
+{"title":"myJsonData"}
+
+{"title":"myJsonData",
+"update":"2015-03-31"}
+
+{"title":"myJsonData",
+"data": [ {"value":"data of value1"},{"value":"data of value2"}]
+}
+```
+
+### 数値と文字列
+
+```
+{"項目名":"文字列"}
+{"項目名":数値}
+```
+
+### for example
+```
+{"title":"myJsonData",
+"data":"文字列"}
+
+{"title":"myJsonData",
+"data":111}
+```
+
+### JSON Objectの扱い
+```
+String jsonData = "{\"title\":\"myJsonData\",
+\"data\":\"文字列\"}";
+
+JSON Object mJson = new JSONObject(jsonData);
+String mTitle = mJson.get("title");
+String mData = "mJson.get("data");
+```
+
+### JSON Objectの配列の扱い
+```
+String jsonData = "\"title\":\"myJsonData\",
+\"data\": [ {\"value\":\"data of value1\"},{\"value\":\"data of value2\"}]}";
+
+JSON Object mJson = new JSONObject(jsonData);
+
+String mTitle = mJson.get("title");
+
+JSONArray datas = mJson.getJSONArray("data");
+    for(int i = 0; i < datas.length(); i++) {
+       String mValue = datas.getJSONObject(i).getString("value");
+       Log.i(TAG,"value:"+mValue);
+    }
+}
+```
+
+MainActivity.java
+```java
+package com.gclue.mypiano;
+
+import android.app.Activity;
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
+
+public class MainActivity  extends Activity implements View.OnClickListener {
+
+    /** Button配列の定義。 */
+    private ArrayList<Button> buttons = new ArrayList< Button >();
+    /** サウンド配列の定義。 */
+    private ArrayList<MediaPlayer> sounds = new ArrayList< MediaPlayer >();
+    /** /res/layout/pianosample001_layout.xmlに記述したボタンの数。 */
+    private int howManyButtons = 8;
+
+    /** Data. */
+    private String mMerodyData = "{\"title\" : \"MySound\",\"data\" : [" +
+            "{\"merody\" : 0,\"time\" : 500}," +
+            "{\"merody\" : 1,\"time\" : 500}," +
+            "{\"merody\" : 2,\"time\" : 500}," +
+            "{\"merody\" : 1,\"time\" : 500}," +
+            "{\"merody\" : 2,\"time\" : 300}," +
+            "{\"merody\" : 3,\"time\" : 100}," +
+            "{\"merody\" : 1,\"time\" : 500}," +
+            "{\"merody\" : 2,\"time\" : 300}," +
+            "{\"merody\" : 3,\"time\" : 100}," +
+            "{\"merody\" : 1,\"time\" : 500}," +
+            "{\"merody\" : 2,\"time\" : 300}," +
+            "{\"merody\" : 3,\"time\" : 100},]}";
+
+    /** Button play. */
+    private Button mButtonPlay;
+
+    @Override
+    public void onCreate( Bundle savedInstanceState ) {
+        super.onCreate( savedInstanceState );
+        requestWindowFeature( Window.FEATURE_NO_TITLE );
+        setContentView( R.layout.activity_main );
+        mButtonPlay = (Button)findViewById(R.id.buttonPlay);
+        mButtonPlay.setOnClickListener( this );
+
+        // /res/layout/pianosample_layout.xml に記述したボタンを読み込む
+        addButtonAndSound(howManyButtons);
+    }
+
+    /**
+     * ボタンをボタン配列に、サウンドをサウンド配列に格納する。
+     * @param num ボタンの数
+     */
+    private void addButtonAndSound( int num ) {
+        for ( int i = 0; i < num; i++ ) {
+            String n = Integer.toString( i + 1 );
+
+            // ボタンをボタン配列に格納する
+            int buttonId = getResources().getIdentifier( "button" + n, "id", getPackageName() );
+            Button mButton = (Button) findViewById( buttonId );
+            mButton.setOnClickListener( this );
+            buttons.add( mButton );
+
+            // サウンドをサウンド配列に格納する
+            // サウンドファイルがsound01のように、0が付いた2桁表示になっているため、数値の頭に0を付けた文字列を作成する
+            if ( i < 10 ) {
+                n = "0" + n;
+            }
+            int soundId = getResources().getIdentifier( "sound" + n, "raw", getPackageName() );
+
+            MediaPlayer sound = MediaPlayer.create( this, soundId );
+            sounds.add( sound );
+        }
+    }
+
+    /**
+     * コンポーネントがクリックされると呼び出される。
+     */
+    @Override
+    public void onClick( View mView ) {
+        if(mView.equals(mButtonPlay)) {
+
+            JSONObject mMerodyJson = null;
+            try {
+                mMerodyJson = new JSONObject(mMerodyData);
+
+                Log.i("PIANO", "title:" + mMerodyJson.get("title"));
+
+                JSONArray datas = mMerodyJson.getJSONArray("data");
+
+                for(int i = 0; i < datas.length(); i++) {
+                    int onkai = datas.getJSONObject(i).getInt("merody");
+                    sounds.get(onkai).seekTo(0);
+                    sounds.get(onkai).start();
+
+                    int sleepTime = datas.getJSONObject(i).getInt("time");
+                    try {
+                        Thread.sleep(sleepTime);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        } else {
+            // button配列に格納してあるButtonを一つずつ取り出し、クリックされたView(mView)とButtonが一致した場合、音を再生する。
+            for (int i = 0; i < howManyButtons; i++) {
+                if (mView.equals(buttons.get(i))) {
+                    Log.i("PIANO", "Button" + Integer.toString(i + 1) + "がクリックされました。");
+                    sounds.get(i).seekTo(0);
+                    sounds.get(i).start();
+                    return;
+                }
+            }
+        }
+    }
+}
+```
+
+## ボタン押下をシミュレーション
+
+```java
+package com.gclue.mypiano;
+
+import android.app.Activity;
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
+
+public class MainActivity  extends Activity implements View.OnClickListener {
+
+    /** Button配列の定義。 */
+    private ArrayList<Button> buttons = new ArrayList< Button >();
+    /** サウンド配列の定義。 */
+    private ArrayList<MediaPlayer> sounds = new ArrayList< MediaPlayer >();
+    /** /res/layout/pianosample001_layout.xmlに記述したボタンの数。 */
+    private int howManyButtons = 8;
+
+    /** Data. */
+    private String mMerodyData = "{\"title\" : \"MySound\",\"data\" : [" +
+            "{\"merody\" : 0,\"time\" : 500}," +
+            "{\"merody\" : 1,\"time\" : 500}," +
+            "{\"merody\" : 2,\"time\" : 500}," +
+            "{\"merody\" : 1,\"time\" : 500}," +
+            "{\"merody\" : 2,\"time\" : 300}," +
+            "{\"merody\" : 3,\"time\" : 100}," +
+            "{\"merody\" : 1,\"time\" : 500}," +
+            "{\"merody\" : 2,\"time\" : 300}," +
+            "{\"merody\" : 3,\"time\" : 100}," +
+            "{\"merody\" : 1,\"time\" : 500}," +
+            "{\"merody\" : 2,\"time\" : 300}," +
+            "{\"merody\" : 3,\"time\" : 100},]}";
+
+    /** Button play. */
+    private Button mButtonPlay;
+
+    @Override
+    public void onCreate( Bundle savedInstanceState ) {
+        super.onCreate( savedInstanceState );
+        requestWindowFeature( Window.FEATURE_NO_TITLE );
+        setContentView( R.layout.activity_main );
+        mButtonPlay = (Button)findViewById(R.id.buttonPlay);
+        mButtonPlay.setOnClickListener( this );
+
+        // /res/layout/pianosample_layout.xml に記述したボタンを読み込む
+        addButtonAndSound(howManyButtons);
+    }
+
+    /**
+     * ボタンをボタン配列に、サウンドをサウンド配列に格納する。
+     * @param num ボタンの数
+     */
+    private void addButtonAndSound( int num ) {
+        for ( int i = 0; i < num; i++ ) {
+            String n = Integer.toString( i + 1 );
+
+            // ボタンをボタン配列に格納する
+            int buttonId = getResources().getIdentifier( "button" + n, "id", getPackageName() );
+            Button mButton = (Button) findViewById( buttonId );
+            mButton.setOnClickListener( this );
+            buttons.add( mButton );
+
+            // サウンドをサウンド配列に格納する
+            // サウンドファイルがsound01のように、0が付いた2桁表示になっているため、数値の頭に0を付けた文字列を作成する
+            if ( i < 10 ) {
+                n = "0" + n;
+            }
+            int soundId = getResources().getIdentifier( "sound" + n, "raw", getPackageName() );
+
+            MediaPlayer sound = MediaPlayer.create( this, soundId );
+            sounds.add( sound );
+        }
+    }
+
+    /**
+     * コンポーネントがクリックされると呼び出される。
+     */
+    @Override
+    public void onClick( View mView ) {
+        if(mView.equals(mButtonPlay)) {
+
+            JSONObject mMerodyJson = null;
+            try {
+                mMerodyJson = new JSONObject(mMerodyData);
+
+                Log.i("PIANO", "title:" + mMerodyJson.get("title"));
+
+                JSONArray datas = mMerodyJson.getJSONArray("data");
+
+                for(int i = 0; i < datas.length(); i++) {
+                    int onkai = datas.getJSONObject(i).getInt("merody");
+
+                    buttons.get(onkai).performClick();
+
+                    int sleepTime = datas.getJSONObject(i).getInt("time");
+                    try {
+                        Thread.sleep(sleepTime);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        } else {
+            // button配列に格納してあるButtonを一つずつ取り出し、クリックされたView(mView)とButtonが一致した場合、音を再生する。
+            for (int i = 0; i < howManyButtons; i++) {
+                if (mView.equals(buttons.get(i))) {
+                    Log.i("PIANO", "Button" + Integer.toString(i + 1) + "がクリックされました。");
+                    sounds.get(i).seekTo(0);
+                    sounds.get(i).start();
+                    return;
+                }
+            }
+        }
+    }
+}
+```
+
+
