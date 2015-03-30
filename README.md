@@ -1,4 +1,6 @@
-Android Docs 0.1
+Android Docs 
 =======
 
 Android Bootcamp用チュートリアル
+
+![](android.JPG)
