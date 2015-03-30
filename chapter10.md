@@ -2,6 +2,8 @@
 
 ## 曲選択画面用Activityの作成
 
+
+
 listview_main.xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
