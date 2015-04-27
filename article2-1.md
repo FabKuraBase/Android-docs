@@ -1,6 +1,7 @@
 # 事前準備
 
-Bluetoothとは
+### Bluetoothとは
+
 
 10メートル程度までの距離の機器間で使用できる2.4GHz帯の電波による無線通信です。
 
@@ -8,7 +9,8 @@ Bluetoothとは
 
 
 
-準備するもの
+### 準備するもの
+
 
 ・Android開発環境 (eclipse)
 
@@ -16,9 +18,11 @@ Bluetoothとは
 データ通信ケーブル(USB-USBmini)
 
 ・Arduino Uno
+<br>
 http://arduino.cc/en/Main/ArduinoBoardUno
 
 ・Bluetooth Mate 
+<br>
 https://www.sparkfun.com/products/12580
 
 ・ブレッドボード
@@ -26,7 +30,8 @@ https://www.sparkfun.com/products/12580
 ・LED
 ・抵抗
 
-Bluetoothペアリング設定
+## Bluetoothペアリング設定
+
 
 連携を行うためには、スマートフォンとBluetoothをペアリングする必要があります。
 まずはArduinoの回路を作成してみましょう。
@@ -41,6 +46,7 @@ Bluetoothペアリング設定
 
 
 この状態でAndroid端末側でペアリング設定を行います。
+<br>
 「設定」の「無線とネットワーク」より「Bluetooth」を選択します。
 この時、Bluetoothが無効になっている場合は有効にして下さい。
 <br>
@@ -52,12 +58,14 @@ Bluetoothのスキャンを行い、対象のBluetoothモジュールを選択�
 ![](bt1-04.jpg)
 
 この「RNBT-2D20」というのがBluetooth Mateのデバイス名となります。
+<br>
 「RNBT-XXXX」で表示され、この「XXXX」部分はモジュールによって異なります。
 <br>
 ![](bt1-05.jpg)
 
 
 表示されたデバイスを選択し、ペアリングを選択するとコード入力が求められます。
+<br>
 ここで「1234」を入力し「OK」ボタンを押します。
 <br>
 ![](bt1-06.jpg)
@@ -70,7 +78,8 @@ Bluetoothのスキャンを行い、対象のBluetoothモジュールを選択�
 ![](bt1-07.jpg)
 
 
-Android開発者向けオプション設定
+## Android開発者向けオプション設定
+
 
 Android端末で実行する場合、開発者用オプション設定が必要になります。
 <br>
@@ -79,6 +88,7 @@ Android端末で実行する場合、開発者用オプション設定が必要�
 設定画面を開き、「開発者向けオプション」を選択します。
 
 ※機種によっては、この「開発者向けオプション」が非表示になっている場合があります。
+<br>
 その場合は、設定画面より、「タブレット情報」を開き、表示された「ビルド番号」という文字を７回タップすると表示されます。
 
 
@@ -104,6 +114,7 @@ Android端末で実行する場合、開発者用オプション設定が必要�
 
 
 USBデバッグにチェックが付きました。
+<br>
 これで開発者向けオプションの設定は完了です。
 <br>
 ![](bt1-12.jpg)
