@@ -11,7 +11,7 @@
 
 
 #### 回路 (Arduino Uno)
-![](usb3-01.jpg)
+![](usb2-01.jpg)
  
 
 
@@ -43,10 +43,13 @@ void loop(){
 
 
 ### Arduino Mega
+![](usb2-02.jpg)
 
 
 #### 回路 (Arduino Mega)
 
+<br>
+![](usb2-03.jpg)
 
 Arduino 18 TX1  -> USB Serial RXD
 <br>
@@ -276,6 +279,8 @@ AndroidManifext.xml
 device_filter.xml
 
 res/xmlフォルダーを新規作成し、device_filter.xmlを作成します。
+<br>
+![](usb2-04.jpg)
 
 作成したdevice_filter.xmlを変更します。
 ```
@@ -299,12 +304,15 @@ PCとAndroid端末をUSBケーブルで繋ぎます。
 
 スマートフォン　→　変換アダプタ　→　USBケーブル　
 →　Arduino(USBシリアルアダプタ)　→　USBケーブル　→　PC
-
+<br>
+![](usb2-05.jpg)
 
 
 この時、Arduino IDEを起動し、シリアルモニタを起動しておきます。
 <br>
 シリアルモニタはウィンドウの右上にありますルーペマークをクリックすると起動することができます。
+<br>
+![](usb2-06.jpg)
 
 
 
@@ -312,7 +320,9 @@ PCとAndroid端末をUSBケーブルで繋ぎます。
 <br>
 右下の転送レートがスケッチで入力した値と一致していないと正しく表示されないため
 同じ値の「19200」にしておきましょう。
-
-
+<br>
+![](usb2-07.jpg)
 
 Androidのボタンを押すと1が出力されます。
+<br>
+![](usb2-08.jpg)
