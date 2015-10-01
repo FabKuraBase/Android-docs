@@ -3,7 +3,7 @@
 ## Android Studioのインストール
 
 Android Studioをダウンロードする。
-http://developer.android.com/sdk/index.html#top
+https://developer.android.com/sdk/index.html
 
 ダウンロードした、dmgファイルを実行する。
 
