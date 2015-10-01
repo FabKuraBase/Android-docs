@@ -2,10 +2,10 @@
 
 Androidでは、画面のあるアプリケーションを開発する場合は、Activityで開発する。Acivity以外に、画面のない常駐型のアプリケーションを開発可能なServiceや、データへのアクセス用のContentsProvider、AndroidからのBroadcastを取得するためのBroadcast Recieverが存在しています。
 
-![](chapter3/pre0301.jpg)
+![pre0301](img-chapter03/pre0301.jpg)
 
 ## Activity
-![](chapter3/pre0302.png)
+![pre0302](img-chapter03/pre0302.png)
 AndroidManifest.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
 
 ## Service
 
-![](chapter3/pre0303.png)
+![pre0303](img-chapter03/pre0303.png)
 
 AndroidManifest.xml
 ```
