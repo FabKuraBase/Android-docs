@@ -221,19 +221,19 @@ dependencies {
 
 [設定]-[端末情報]を選択する。
 
-![](chapter2/pre0207.png)
+![pre0207](img-chapter02/pre0207.png)
 
 ビルド番号を10回クリックするとデバイスが開発モードに変わる。
 
-![](chapter2/pre0208.png)
+![pre0208](img-chapter02/pre0208.png)
 
 [設定]-[端末情報]に[開発者向けオプション]の項目が出現するので、選択する。
 
-![](chapter2/pre0209.png)
+![pre0209](img-chapter02/pre0209.png)
 
 USBデバックをOnにする。
 
-![](chapter2/pre0210.png)
+![](img-chapter02/pre0210.png)
 
 
 ## Build
