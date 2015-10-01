@@ -13,7 +13,7 @@ Android Studio 1.0のインストール画面が表示されるので、Android 
 
 ![pre0102](chapter1/pre0102.png)
 
-/Application/
+/Applicationフォルダにインストールされる。
 
 ![pre0102_2](chapter1/pre0102_2.png)
 
