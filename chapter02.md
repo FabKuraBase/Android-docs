@@ -4,7 +4,7 @@
 
 Android Studioを起動して、"Start a new Android Studio project"を選択する。
 
-![Image0201](chapter2/pre0201.png)
+![pre0201](img-chapter02/pre0201.png)
 
 "Create New Project"ダイアログボックスで、Application nameとCompany Domain:を入力する。入力した値は、Package nameの欄にも反映される。
 
@@ -16,15 +16,15 @@ Google Playでは、各アプリの表示はパッケージ名でおこなって
 
 また、Project locationでは、プロジェクトを保存する場所を選択する。Macの場合、Document以下にworkspace_プロジェクト名という感じにおくと良い(ここは個人の好み、ルールに従う)。
 
-![Image0202](chapter2/pre0202.png)
+![pre0202](img-chapter02/pre0202.png)
 
 Phone and TabletnおMinimum SDKでは、サポートする最低レベルのAPIのバージョンを指定する。
 
-![Image0203_2](chapter2/pre0203_2.png)
+![pre0203_2](img-chapter02/pre0203.png)
 
 どの画面を初期で呼び出すかは、テンプレートから選択する。今回は、Blank Activity を選択する。
 
-![Image0204](chapter2/pre0204.png)
+![pre0204](img-chapter02/pre0204.png)
 
 最後に、Activity Name等を確認し、[Finish]を押す。
 
@@ -35,22 +35,20 @@ Phone and TabletnおMinimum SDKでは、サポートする最低レベルのAPI�
 | Title | アプリのタイトルを指定 |
 | Menu Resource Name: | Menuで表示するレイアウトのXMLのファイル名を指定
 
-![Image0205_2](pre0205_2.png)
+![pre0205](img-chapter02/pre0205.png)
 
 | 番号 | ファイルの内容 |
 | -- | -- |
-|①| AndroidのManifest情報を記載 |
-|②| 起動時に呼ばれるActivity |
-|③| ActivityのUIレイアウト |
-|④| メニューのUIレイアウト |
-|⑤| build.gradle |
-|⑥| build.gradle |
+|①| AndroidManifest.xml | AndroidのManifest情報を記載 |
+|②| MainActivity.java | 起動時に呼ばれるActivity |
+|③| activity_main.xml | ActivityのUIレイアウト |
+|④| menu_main.xml | メニューのUIレイアウト |
+|⑤| string.xml | 文字情報のXML |
+|⑥| styles.xml | スタイル情報のXML |
+|⑦| build.gradle | Build gradle |
+|⑧| build.gradle | Build gradle |
 
-
-![Image0206_2](chapter2/pre0206_2.png)
-
-![Image0206](chapter2/pre0206.png)
-
+![pre0206](img-chapter02/pre0206.png)
 
 AndroidManifext.xml
 ```XML
@@ -218,6 +216,25 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
 }
 ```
+
+## デバイスの開発者向けオプションを有効にする
+
+[設定]-[端末情報]を選択する。
+
+![](chapter2/pre0207.png)
+
+ビルド番号を10回クリックするとデバイスが開発モードに変わる。
+
+![](chapter2/pre0208.png)
+
+[設定]-[端末情報]に[開発者向けオプション]の項目が出現するので、選択する。
+
+![](chapter2/pre0209.png)
+
+USBデバックをOnにする。
+
+![](chapter2/pre0210.png)
+
 
 ## Build
 
