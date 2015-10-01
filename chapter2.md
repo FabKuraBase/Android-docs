@@ -46,6 +46,9 @@ Phone and TabletnおMinimum SDKでは、サポートする最低レベルのAPI�
 |⑤| build.gradle |
 |⑥| build.gradle |
 
+
+![Image0206_2](chapter2/pre0206_2.png)
+
 ![Image0206](chapter2/pre0206.png)
 
 
