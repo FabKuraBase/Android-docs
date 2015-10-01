@@ -233,18 +233,16 @@ dependencies {
 
 USBデバックをOnにする。
 
-![](img-chapter02/pre0210.png)
+![pre0210](img-chapter02/pre0210.png)
 
 
 ## Build
 
-![](chapter2/pre0207.png)
+![pre0211](img-chapter02/pre0211.png)
 <br>
 <br>
-![](chapter2/pre0208.png)
+![pre0212](img-chapter02/pre0212.png)
 
-
-![](chapter2/pre0209.png)
 
 ## メニューからアプリを終了
 
