@@ -4,7 +4,7 @@
 
 Androidでは、Activityを継承したクラスは、Windoowを保持する。WindowにViewを貼り付ける事で、描画関連の処理をおこなう事ができる。
 
-![](chapter5/pre0501.png)
+![pre0501](img-chapter05/pre0501.png)
 
 Viewクラスを継承したクラスは、Window.setContentView() または、Window.addContentView()で、Windowに貼り付けられる。
 
@@ -12,29 +12,29 @@ Viewクラスを継承したクラスは、Window.setContentView() または、W
 
 [File]-[New Project]を選択し、新しいプロジェクトを作成する。
 
-![](chapter5/pre0502.png)
+![pre0502](img-chapter05/pre0502.png)
 
 Application nameを設定し、[Next]ボタンを押す。
 
-![](chapter5/pre0503.png)
+![pre0503](img-chapter05/pre0503.png)
 
 Minimum SDKのAPIバージョンを設定する。
 
-![](chapter5/pre0504.png)
+![pre0504](img-chapter05/pre0504.png)
 
 ActivityはBlack Activityを選択する。
 
-![](chapter5/pre0505.png)
+![pre0505](img-chapter05/pre0505.png)
 
-![](chapter5/pre0506.png)
+![pre0506](img-chapter05/pre0506.png)
 
 ## Viewを継承したクラスを定義
 
 パッケージ名の上で、CTRL + 右クリックでショートカットメニューを表示する。
 
-![](chapter5/pre0507.png)
+![pre0507](img-chapter05/pre0507.png)
 
-![](chapter5/pre0508.png)
+![pre0508](img-chapter05/pre0508.png)
 
 MyView.java
 ```
@@ -418,20 +418,20 @@ class MyView extends View {
 
 ## 画像の描画
 
-![](chapter5/gclue_logo.gif)
+![prelogo](img-chapter05/gclue_logo.gif)
 gclue_logo.gif
 
 ダウンロードした、gclue_logo.gifを選択し、CTRL + 右クリックで表示されるシュートカットメニューで、gclue_logo.gifのコピーを選ぶ。
 
-![](chapter5/pre0509.png)
+![pre0509](img-chapter05/pre0509.png)
 
 Studioのdrawableを選択し、その上でCTRL + 右クリックを押して表示されるショートカットメニューからPasteを選択する。
 
-![](chapter5/pre0510.png)
+![pre0510](img-chapter05/pre0510.png)
 
 コピー先フォルサを確認し、[OK]でコピーする。
 
-![](chapter5/pre0511.png)
+![pre0511](img-chapter05/pre0511.png)
 
 MyView.java
 ```java

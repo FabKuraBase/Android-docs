@@ -23,7 +23,7 @@ ActivityはBlack Activityを選択する。
 
 ![pre0405](img-chapter04/pre0405.png)
 
-![](chapter4/pre0406.png)
+![pre0406](img-chapter04/pre0406.png)
 
 ## onCreate() 省略不可
 
@@ -262,4 +262,4 @@ public class MainActivity extends ActionBarActivity {
 終了すると、
 ![pre0415](img-chapter04/pre0415.png)
 
-![](chapter4/pre0416.png)
+![pre0416](img-chapter04/pre0416.png)
