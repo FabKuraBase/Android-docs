@@ -3,25 +3,25 @@
 Activityの始まりから終わりまでの、ライフサイクルの解説をおこなう。
 
 
-![](chapter4/pre0401.png)
+![pre0401](img-chapter04/pre0401.png)
 
 ## 新規プロジェクトの作成
 
 [File]-[New Project]を選択し、新しいプロジェクトを作成する。
 
-![](chapter4/pre0402.png)
+![pre0402](img-chapter04/pre0402.png)
 
 Application nameを設定し、[Next]ボタンを押す。
 
-![](chapter4/pre0403.png)
+![pre0403](chapter4/pre0403.png)
 
 Minimum SDKのAPIバージョンを設定する。
 
-![](chapter4/pre0404.png)
+![pre0404](chapter4/pre0404.png)
 
 ActivityはBlack Activityを選択する。
 
-![](chapter4/pre0405.png)
+![pre0405](img-chapter04/pre0405.png)
 
 ![](chapter4/pre0406.png)
 
@@ -91,34 +91,34 @@ Logクラスを用いてログを出力する。1つ目の引数にキーワー�
 
 Log.iと記載すると、Logの下に赤線が出力され、エラーが発生する。これはLogクラスがImportされていない事に起因するエラーであるLogの赤線の上に、マウスポインタを移動する。
 
-![](chapter4/pre0407.png)
+![pre0407](img-chapter04/pre0407.png)
 
 Logにマウスポインタを移動している状態で、alt + Enterを押すと、Logクラスのimport文が自動的に追加される。
 
 ```
 alt + Enter
 ```
-![](chapter4/pre0408.png)
+![pre0408](img-chapter04/pre0408.png)
 
 ログの出力を確認する。ログはAndroid DDMSを用いて表示する。Studioの下に表示されているAndroidタブを選択する。
 
-![](chapter4/pre0409.png)
+![pre0409](img-chapter04/pre0409.png)
 
 これでログ画面が表示されるようになる。
 
-![](chapter4/pre0410.png)
+![pre0410](img-chapter04/pre0410.png)
 
 次に端末に接続する。
 
-![](chapter4/pre0411.png)
+![pre0411](img-chapter04/pre0411.png)
 
 表示するログを今起動中のアプリだけにするために、Filterで自分のアプリのパッケージ名を選択する。
 
-![](chapter4/pre0412.png)
+![pre0412](img-chapter04/pre0412.png)
 
 キーワードにLIFEといれ、表示するログを絞る。
 
-![](chapter4/pre0413.png)
+![pre0413](img-chapter04/pre0413.png)
 
 ## onCreate()以外も実装する
 
@@ -257,9 +257,9 @@ public class MainActivity extends ActionBarActivity {
 ```
 
 起動すると、
-![](chapter4/pre0414.png)
+![pre0414](img-chapter04/pre0414.png)
 
 終了すると、
-![](chapter4/pre0415.png)
+![pre0415](img-chapter04/pre0415.png)
 
 ![](chapter4/pre0416.png)
