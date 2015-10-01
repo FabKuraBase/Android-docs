@@ -275,7 +275,7 @@ activity_main.xml
 ## 音の組み込みと鍵盤の配色
 
 
-![](chapter9/pre0901.png)
+![pre0901](img-chapter09/pre0901.png)
 
 
 MainActivty.java
@@ -531,7 +531,7 @@ activity_main.xml
 ```
 
 
-![](chapter9/pre0902.png)
+![pre0902](img-chapter09/pre0902.png)
 
 res/drawable/kenban.xml
 ```java

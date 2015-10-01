@@ -9,42 +9,40 @@
 ## Android 1.5 Cupcake
 2009年4月30日
 
-![](appendix3/ap0301.JPG)
+![ap0301](img-appendix03/ap0301.JPG)
 
 ## Android  1.6 Donuts
 2009年9月15日
 
-![](appendix3/ap0302.JPG)
+![ap0302](img-appendix03/ap0302.JPG)
 
 ## Android 2.0/2.1 Eclair
 2009年10月26日
 
-![](appendix3/ap0303.JPG)
+![ap0303](img-appendix03/ap0303.JPG)
 
 ## Android 2.2 Froyo
 2010年5月12日 
 
-![](appendix3/ap0304.JPG)
+![ap0304](img-appendix03/ap0304.JPG)
 
 ## Android 2.3 Gingerbread
 2010年12月6日
 
-![](appendix3/ap0305.JPG)
+![ap0305](img-appendix03/ap0305.JPG)
 
 ## Android 3.x Honeycomb
 2011年2月22日
 
-![](appendix3/ap0306.JPG)
+![ap0306](img-appendix03/ap0306.JPG)
 
 ## Android 4.0 Ice Cream Sandwich
 2011年10月18日
 
-![](appendix3/ap0307.JPG)
+![ap0307](img-appendix03/ap0307.JPG)
 
 ## Android 4.1/4.2/4.3 Jelly Bean
 2012年6月27日
-
-
 
 ## Android 4.4 KitKat
 2013年10月31日

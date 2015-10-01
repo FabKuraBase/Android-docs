@@ -8,27 +8,27 @@ Githubより音源をダウンロードしてくる。
 
 ダウンロードしてきた音声ファイルの上で、CTRL + 右クリックを選択し表示されるショートカットメニューから"taiko.wav"をコピーを選択する。
 
-![](chapter7/pre0701.png)
+![pre0701](img-chapter07/pre0701.png)
 
 Android Studioのresフォルダの上で、CTRL + 右クリックを選択し表示されるショートカットメニューから[New]-[Directory]を選択する。
 
-![](chapter7/pre0702.png)
+![pre0702](img-chapter07/pre0702.png)
 
 rawという名前のディレクトリを作成する。res/raw
 
-![](chapter7/pre0703.png)
+![pre0703](img-chapter07/pre0703.png)
 
 res/rawディレクトリの上で、CTRL + 右クリックで表示されるショートカットメニューで、Pasteを選択する。
 
-![](chapter7/pre0704.png)
+![pre0704](img-chapter07/pre0704.png)
 
 移動フォルダを確認し、OKを押して移動が完了する。
 
-![](chapter7/pre0705.png)
+![pre0705](img-chapter07/pre0705.png)
 
 # 音の再生(短い音)
 
-![](chapter7/pre0706.png)
+![pre0706](img-chapter07/pre0706.png)
 
 MyView.java
 

@@ -1,12 +1,12 @@
 # 太鼓アプリの作成
 
 ## 開発するアプリ
-![](chapter8/pre0801.png)
+![pre0801](img-chapter08/pre0801.png)
 
 ## 開発で必要な素材
 太鼓の画像
 
-![](chapter8/pre0802.png)
+![pre0802](img-chapter08/pre0802.png)
 
 太鼓の音
 [taiko.wav](https://github.com/FabKuraBase/Android-docs/blob/master/res/taiko.wav)
@@ -127,9 +127,9 @@ class TaikoView extends View {
 }
 ```
 
-![](chapter8/pre0803.png)
+![pre0803](img-chapter08/pre0803.png)
 
-![](chapter8/pre0804.png)
+![pre0804](img-chapter08/pre0804.png)
 
 ## あたり判定
 太鼓の中心点を求める数式
