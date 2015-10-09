@@ -13,11 +13,11 @@ Activityの始まりから終わりまでの、ライフサイクルの解説を
 
 Application nameを設定し、[Next]ボタンを押す。
 
-![pre0403](chapter4/pre0403.png)
+![pre0403](img-chapter04/pre0403.png)
 
 Minimum SDKのAPIバージョンを設定する。
 
-![pre0404](chapter4/pre0404.png)
+![pre0404](img-chapter04/pre0404.png)
 
 ActivityはBlack Activityを選択する。
 
