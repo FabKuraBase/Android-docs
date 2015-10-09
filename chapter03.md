@@ -6,6 +6,9 @@ Androidでは、画面のあるアプリケーションを開発する場合は�
 
 ## Activity
 ![pre0302](img-chapter03/pre0302.png)
+
+### AndroidManifest.xml
+
 AndroidManifest.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -44,6 +47,8 @@ activityタグで、囲われた部分に、起動Javaクラス名等を記載�
             </intent-filter>
         </activity>
 ```
+
+### MainActivity.java
 
 MainActivity.java
 ```java
