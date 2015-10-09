@@ -2,6 +2,8 @@
 
 ## 音データ
 
+Pianoの音
+[taiko.wav](https://github.com/FabKuraBase/Android-docs/blob/master/res/taiko.wav)
 
 
 ## 新規プロジェクトの作成
