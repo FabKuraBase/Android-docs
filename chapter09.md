@@ -3,7 +3,7 @@
 ## 音データ
 
 Pianoの音
-[taiko.wav](https://github.com/FabKuraBase/Android-docs/blob/master/res/taiko.wav)
+[piano.zip](https://github.com/FabKuraBase/Android-docs/blob/master/img-chapter09/sound.zip)
 
 
 ## 新規プロジェクトの作成
