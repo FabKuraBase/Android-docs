@@ -17,7 +17,7 @@ TaikoAppというプロジェクト名のアプリを作成する。
 
 taiko.pngをres/drawableに、pon.wavをres/rawにコピーする。
 
-![](chapter8/pre0810.png)
+![pre0810](img-chapter08/pre0810.png)
 
 MainActivity.java
 ```java
@@ -137,14 +137,14 @@ class TaikoView extends View {
 int mCenterX = mTaikoX + mTaikoImage.getWidth()/2;
 int mCenterY = mTaikoY + mTaikoImage.getHeight()/2;
 ```
-![](chapter8/pre0805.png)
+![pre0805](img-chapter08/pre0805.png)
 
 半径Rを求める数式
 ```
 int mTaikoR = taikoImage.getWidth() / 2;
 ```
 
-![](chapter8/pre0806.png)
+![pre0806](img-chapter08/pre0806.png)
 
 太鼓の中心点とタッチした座標の距離を求める数式
 ```
@@ -152,11 +152,11 @@ double distance = Math.sqrt( Math.pow( (mCenterX - mTouchX), 2 ) + Math.pow( (mC
 ```
 太鼓に手があたっていない場合の条件
 
-![](chapter8/pre0807.png)
+![pre0807](img-chapter08/pre0807.png)
 
 太鼓に手があたっている場合の条件
 
-![](chapter8/pre0808.png)
+![pre0808](img-chapter08/pre0808.png)
 
 ## あたり判定の実装
 
