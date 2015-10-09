@@ -93,10 +93,10 @@ Log.iと記載すると、Logの下に赤線が出力され、エラーが発生
 
 ![pre0407](img-chapter04/pre0407.png)
 
-Logにマウスポインタを移動している状態で、alt + Enterを押すと、Logクラスのimport文が自動的に追加される。
+Logにマウスポインタを移動している状態で、(Macの場合) alt + Enterを押すと、Logクラスのimport文が自動的に追加される。
 
 ```
-alt + Enter
+(Macの場合) alt + Enter
 ```
 ![pre0408](img-chapter04/pre0408.png)
 
