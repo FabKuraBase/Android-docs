@@ -104,14 +104,6 @@ Logにマウスポインタを移動している状態で、 alt + Enterを押�
 
 ![pre0409](img-chapter04/pre0409.png)
 
-これでログ画面が表示されるようになる。
-
-![pre0410](img-chapter04/pre0410.png)
-
-次に端末に接続する。
-
-![pre0411](img-chapter04/pre0411.png)
-
 表示するログを今起動中のアプリだけにするために、Filterで自分のアプリのパッケージ名を選択する。
 
 ![pre0412](img-chapter04/pre0412.png)
