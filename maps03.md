@@ -274,6 +274,7 @@ onClick(View v)追加
     }
 ```
 
+
 ![map0304](img-map03/map0305.png)
 
 ```java
@@ -287,7 +288,7 @@ onClick(View v)追加
 
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
     }
-```java
+```
 
 ![map0305](img-map03/map0306.png)
 
@@ -326,3 +327,4 @@ onClick(View v)追加
 
     }
 ```
+
