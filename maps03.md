@@ -13,7 +13,7 @@ AndroidManifest.xmlにキーをコピーします。
 
 アプリを実行するとGoogle Mapsが表示されます。
 
-![map0301](img-map03/map0303.png)
+![map0303](img-map03/map0303.png)
 
 ## 宇都宮大学に座標を移動
 
@@ -94,6 +94,9 @@ public class MapsActivity extends FragmentActivity {
     }
 }
 ```
+宇都宮大学の座標は、Google Mapで取得します。
+
+![map0304](img-map03/map0304.png)
 
 setUpMap()の中を改良する
 ```java
