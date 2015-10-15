@@ -53,4 +53,4 @@ APIキーの作成に必要なものは、SHA-1 認証フィンガプリント�
 ![map0110](img-map02/map0210.png)
 
 これでAPIキーの生成が完了です。APIキーをコピーしておきます。
-![map0111](img-map01/map0111.png)
+![map0111](img-map02/map0211.png)
