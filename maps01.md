@@ -6,7 +6,7 @@
 
     $  keytool -list -v -keystore ~/.android/debug.keystore
 
-![map0101](img-map01/map01.png)
+![map0101](img-map01/map0101.png)
 
 
 ## Google API Consoleにログイン
