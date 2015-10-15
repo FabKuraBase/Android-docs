@@ -18,6 +18,6 @@ AndroidManifest.xmlにキーをコピーします。
 ## 宇都宮大学に座標を移動
 
 
-
-    CameraUpdate mCameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(35.712496928929276, 139.80357825960232), 15);
+    LatLon mLatLon = new LatLng(35.712496928929276, 139.80357825960232)
+    CameraUpdate mCameraUpdate = CameraUpdateFactory.newLatLngZoom(mLatLon, 15);
     mMap.moveCamera(mCameraUpdate);
