@@ -108,6 +108,23 @@ setUpMap()の中を改良する
 
 ## Google Mapの中心点の座標を表示　
 
+maps_activity.xml
+```
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:id="@+id/map" tools:context=".MapsActivity"
+    android:name="com.google.android.gms.maps.SupportMapFragment">
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lat/Lon" >
+    </Button>
+
+</fragment>
+
+```
 
 MapsActivity.java
 ```java
@@ -205,4 +222,39 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
     }
 }
 
+```
+
+変数追加
+```java
+    /** 緯度、経度を表示するボタン. */
+    private Button mButton01;
+```
+
+onCreate()追記
+```java
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_maps);
+        setUpMapIfNeeded();
+
+        // 緯度・経度を表示するボタン。押すと緯度経度のToastを表示する
+        mButton01 = (Button) findViewById(R.id.Button01);
+        mButton01.setOnClickListener(this);
+    }
+
+```
+
+onClick(View v)追加
+```java
+@Override
+    public void onClick(View v) {
+        if (v.equals(mButton01)) {
+            LatLng latLng = mMap.getCameraPosition().target;
+            // 地図の中心点の緯度・経度を取得
+            double lat = latLng.latitude;
+            double lon = latLng.longitude;
+            Toast.makeText(this, "lat:" + lat + " lon:" + lon, Toast.LENGTH_LONG).show();
+        }
+    }
 ```
