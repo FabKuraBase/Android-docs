@@ -18,6 +18,8 @@ AndroidManifest.xmlにキーをコピーします。
 ## 宇都宮大学に座標を移動
 
 
+MapsActivity.java
+
 ```java
 package utsunomiya.gclue.com.mapsample;
 
@@ -91,6 +93,11 @@ public class MapsActivity extends FragmentActivity {
         mMap.moveCamera(mCameraUpdate);
     }
 }
-``
+```
 
-`
+setUpMap()の中を改良する
+```java
+    LatLng mLatLon = new LatLng(36.549792, 139.929513);
+    CameraUpdate mCameraUpdate =     CameraUpdateFactory.newLatLngZoom(mLatLon, 15);
+    mMap.moveCamera(mCameraUpdate);
+```
