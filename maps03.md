@@ -15,3 +15,5 @@ AndroidManifest.xmlにキーをコピーします。
 
 ![map0301](img-map03/map0303.png)
 
+## 宇都宮大学に座標を移動
+
