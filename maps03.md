@@ -261,11 +261,51 @@ onClick(View v)追加
 
 ## 地図のタイプ
 
+```java
+  private void setUpMap() {
+
+        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+
+        LatLng mLatLon = new LatLng(36.549792, 139.929513);
+        CameraUpdate cu = CameraUpdateFactory.newLatLngZoom(mLatLon, 15);
+        mMap.moveCamera(cu);
+
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+    }
+```
 
 ![map0304](img-map03/map0305.png)
 
+```java
+    private void setUpMap() {
+
+        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+
+        LatLng mLatLon = new LatLng(36.549792, 139.929513);
+        CameraUpdate cu = CameraUpdateFactory.newLatLngZoom(mLatLon, 15);
+        mMap.moveCamera(cu);
+
+        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+    }
+```java
 
 ![map0305](img-map03/map0306.png)
 
+```
+    private void setUpMap() {
+
+        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+
+        LatLng mLatLon = new LatLng(36.549792, 139.929513);
+        CameraUpdate cu = CameraUpdateFactory.newLatLngZoom(mLatLon, 15);
+        mMap.moveCamera(cu);
+
+        mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+    }
+
+```
 
 ![map0306](img-map03/map0307.png)
+
+## 現在位置ボタンを表示
+
