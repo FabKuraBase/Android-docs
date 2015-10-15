@@ -109,7 +109,8 @@ setUpMap()の中を改良する
 ## Google Mapの中心点の座標を表示　
 
 
-```
+MapsActivity.java
+```java
 package utsunomiya.gclue.com.mapsample;
 
 import android.support.v4.app.FragmentActivity;
