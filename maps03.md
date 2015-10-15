@@ -307,6 +307,7 @@ onClick(View v)追加
 
 ![map0306](img-map03/map0307.png)
 
+
 ## 現在位置ボタンを表示
 
 
