@@ -309,3 +309,19 @@ onClick(View v)追加
 
 ## 現在位置ボタンを表示
 
+
+```java
+    private void setUpMap() {
+
+        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+
+        LatLng mLatLon = new LatLng(36.549792, 139.929513);
+        CameraUpdate cu = CameraUpdateFactory.newLatLngZoom(mLatLon, 15);
+        mMap.moveCamera(cu);
+
+        mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+
+        mMap.setMyLocationEnabled(true);
+
+    }
+```
