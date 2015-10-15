@@ -1,7 +1,7 @@
 # Google Maps
 
 
-[Google Maps用プロジェクトの生成](https://www.gitbook.com/book/fabkura/android-docs/edit#/edit/master/maps01.md])
-API Keyの取得
-Mapsのカスタマイズ
-Mapsの装飾
+[Google Maps用プロジェクトの生成](https://fabkura.gitbooks.io/android-docs/content/maps01.html])
+[API Keyの取得](https://fabkura.gitbooks.io/android-docs/content/maps02.html)
+[Mapsのカスタマイズ]
+[Mapsの装飾]
