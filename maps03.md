@@ -14,3 +14,4 @@ AndroidManifest.xmlにキーをコピーします。
 アプリを実行するとGoogle Mapsが表示されます。
 
 ![map0301](img-map03/map0303.png)
+
