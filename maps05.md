@@ -1,7 +1,7 @@
 # Maps関連API
 
 ## GeoCoder
-```
+```java
 LatLng latLng = mMap.getCameraPosition().target;
 				// 地図の中心点の緯度・経度を取得
 				double lat = latLng.latitude;
