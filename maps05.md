@@ -2,7 +2,7 @@
 
 ## GeoCoder
 ```java
-LatLng latLng = mMap.getCameraPosition().target;
+                LatLng latLng = mMap.getCameraPosition().target;
 				// 地図の中心点の緯度・経度を取得
 				double lat = latLng.latitude;
 				double lon = latLng.longitude;
@@ -29,7 +29,7 @@ LatLng latLng = mMap.getCameraPosition().target;
 					// 緯度・経度が範囲外の値の時
 					e.printStackTrace();
 				}
-				Toast.makeText(mContext,
+				Toast.makeText(this,
 						"lat:" + lat + " lon:" + lon + " address:" + sb,
 						Toast.LENGTH_LONG).show();
 ```
