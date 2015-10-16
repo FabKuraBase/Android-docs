@@ -25,6 +25,7 @@
     * [API Keyの取得](maps02.md)  
     * [Mapsのカスタマイズ](maps03.md)
     * [Mapsの装飾](maps04.md)
+    * [Maps関連API](maps05.md)
 * [Arduino Bluetooth連携](chapter11.md)
    * [事前準備](article2-1.md)
    * [テキスト送受信](article2-2.md)
