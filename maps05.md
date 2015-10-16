@@ -7,7 +7,7 @@
 				double lat = latLng.latitude;
 				double lon = latLng.longitude;
 				// Geocoderで住所を取得
-				Geocoder mGeocoder = new Geocoder(mContext, Locale.getDefault());
+				Geocoder mGeocoder = new Geocoder(this, Locale.getDefault());
 
 				// 住所を格納する文字列バッファ
 				StringBuffer sb = new StringBuffer();
