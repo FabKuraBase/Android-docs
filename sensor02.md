@@ -99,3 +99,6 @@ public class MainActivity extends Activity implements SensorEventListener {
 | -- | -- |
 | Nexus7 | [MPU-6050](http://store.invensense.com/datasheets/invensense/MPU-6050_DataSheet_V3%204.pdf) |
 
+# Reference
+
+* [Gyroscopeの原理](https://www.youtube.com/watch?v=cquvA_IpEsA)
