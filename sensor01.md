@@ -33,10 +33,10 @@ public class MainActivity extends Activity implements SensorEventListener {
         // SensorManager
         mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
 
-        // Sensorの取得とリスナーへの登録
-        List<Sensor> sensors = mSensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER);
-        if (sensors.size() > 0) {
-            Sensor sensor = sensors.get(0);
+        // 加速度の取得とリスナーへの登録
+        List<Sensor> axisSensors = mSensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER);
+        if (axisSensors.size() > 0) {
+            Sensor sensor = axisSensors.get(0);
             mSensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_FASTEST);
         }
     }
