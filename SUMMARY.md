@@ -28,6 +28,7 @@
     * [Maps関連API](maps05.md)
 * [Sensor](sensor00.md)
     * [加速度センサ](sensor01.md) 
+    * [Gyroセンサ](sensor01.md) 
 * [Arduino Bluetooth連携](chapter11.md)
    * [事前準備](article2-1.md)
    * [テキスト送受信](article2-2.md)
