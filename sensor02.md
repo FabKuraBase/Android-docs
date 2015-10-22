@@ -103,4 +103,4 @@ public class MainActivity extends Activity implements SensorEventListener {
 
 * [Gyroscopeの原理](https://www.youtube.com/watch?v=cquvA_IpEsA)
 * [Gryoscope](https://www.youtube.com/watch?v=zwe6LEYF0j8)
-* [MEMS]()
+* [MEMS](https://www.youtube.com/watch?v=CNmk-SeM0ZI)
