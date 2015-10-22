@@ -85,7 +85,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 # Geometric系
 
 MainActivity.java
-```
+```java
 package utsunomiya.gclue.com.sensorsample;
 
 import android.app.Activity;
