@@ -84,3 +84,5 @@ public class MainActivity extends Activity implements SensorEventListener {
 
 # Reference
 
+- [MPU-9250](http://www.invensense.com/products/motion-tracking/9-axis/)
+- 
