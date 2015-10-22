@@ -1,4 +1,4 @@
-# Gyroセンサ
+# Gyroscope
 
 MainActivity.java
 ```java
