@@ -1,6 +1,7 @@
 # 回転度
 
-```
+MainActivity.java
+```java
 package utsunomiya.gclue.com.sensorsample;
 
 import android.app.Activity;
