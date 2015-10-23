@@ -87,7 +87,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 | 端末 | Chip名 |
 | -- | -- |
 | Nexus7 | [MPU-6050](http://store.invensense.com/datasheets/invensense/MPU-6050_DataSheet_V3%204.pdf) |
-
+| Nexus5 | [MPU-6151] |
 
 
 # Reference
