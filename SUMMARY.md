@@ -27,6 +27,7 @@
     * [Mapsの装飾](maps04.md)
     * [Maps関連API](maps05.md)
 * [Sensor](sensor00.md)
+    * [GPS](sensor10.md) 
     * [加速度センサ](sensor01.md) 
     * [Gyroscope](sensor02.md) 
     * [回転度ベクタ](sensor03.md)
