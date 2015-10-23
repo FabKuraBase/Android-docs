@@ -105,3 +105,9 @@ Titleバーを廃止し、フルスクリーンにする
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+
+CameraView.java
+```java
+
+```
