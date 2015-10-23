@@ -62,3 +62,34 @@ public class MainActivity extends Activity {
 }
 
 ```
+
+# Nexus7
+```
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:MPU6515 Accelerometer
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:AK8963 Magnetometer
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:AK8963 Magnetometer Uncalibrated
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:MPU6515 Gyroscope
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:MPU6515 Gyroscope Uncalibrated
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:APDS-9930/QPDS-T930 Proximity & Light
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:APDS-9930/QPDS-T930 Proximity & Light
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:BMP280 Barometer
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:Gravity
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:Linear Acceleration
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:Rotation Vector
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:Step Detector
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:Step Counter
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:Significant Motion Detector
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:Game Rotation Vector
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:GeoMagnetic Rotation Vector
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:Orientation
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:Tilt Detector
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:MPU6515 Game Rotation Vector Secondary
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:AMD
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:RMD
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:Basic Gestures
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:Tap
+10-23 09:00:29.406    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:Facing
+10-23 09:00:29.407    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:Tilt
+10-23 09:00:29.407    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:Pedometer
+10-23 09:00:29.407    6104-6104/utsunomiya.gclue.com.sensorsample D/SNESOR﹕ Sensor:PEDESTRIAN-ACTIVITY-MONITOR
+```
