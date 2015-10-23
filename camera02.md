@@ -1,6 +1,5 @@
 # Cameraの組み込み
-
-AndroidManifest.xml
+## AndroidManifest.xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -45,7 +44,7 @@ screenOrientationの項目追加
             android:label="@string/app_name" >
 
 
-MainActivity.java
+## MainActivity.java
 ```java
 package utsunomiya.gclue.com.camerasample;
 
@@ -107,7 +106,7 @@ Titleバーを廃止し、フルスクリーンにする
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 
-CameraView.java
+## CameraView.java
 ```java
 package utsunomiya.gclue.com.camerasample;
 
