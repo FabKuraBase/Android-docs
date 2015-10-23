@@ -1,7 +1,7 @@
 # 万歩計
 
 MainActivity.java
-```
+```java
 package utsunomiya.gclue.com.sensorsample;
 
 import android.app.Activity;
