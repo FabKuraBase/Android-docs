@@ -32,6 +32,7 @@
     * [回転度ベクタ](sensor03.md)
     * [温度](sensor04.md)
     * [照度センサ](sensor05.md)
+    * [気圧センサ](sensor06.md)
 * [Arduino Bluetooth連携](chapter11.md)
    * [事前準備](article2-1.md)
    * [テキスト送受信](article2-2.md)
