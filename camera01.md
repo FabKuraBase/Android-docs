@@ -1,6 +1,6 @@
 # Camera用の土台の作成
 
-MainActivity.java
+## MainActivity.java
 ```java
 package utsunomiya.gclue.com.camerasample;
 
@@ -42,7 +42,7 @@ class CameraView extends SurfaceView implements SurfaceHolder.Callback {
 }
 ```
 
-CameraView.java
+## CameraView.java
 ```java
 package utsunomiya.gclue.com.camerasample;
 
