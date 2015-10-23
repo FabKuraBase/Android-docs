@@ -35,6 +35,7 @@
     * [気圧センサ](sensor06.md)
     * [近接センサ](sensor07.md)
     * [万歩計](sensor08.md)
+    * [磁力計](sensor09.md)
 * [Arduino Bluetooth連携](chapter11.md)
    * [事前準備](article2-1.md)
    * [テキスト送受信](article2-2.md)
