@@ -84,3 +84,13 @@ class CameraView extends SurfaceView implements SurfaceHolder.Callback {
 }
 ```
 
+SurfaceHolder.Callbackを実装する事で、SurfaceViewが生成された時、破棄された時、状態がかわった時に処理を追加する事が可能になります。
+
+| メソッド名 | 概要 |
+| -- | -- |
+| surfaceChanged() | SurfaceViewに変化があった際に呼ばれる |
+| surfaceCreated() | SurfaceViewが生成された際に呼ばれる |
+| surfaceDestroyed() | SurfaceViewが破棄された際に呼ばれる |
+
+
+
