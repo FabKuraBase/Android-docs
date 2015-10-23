@@ -37,6 +37,8 @@
     * [近接センサ](sensor07.md)
     * [万歩計](sensor08.md)
     * [磁力計](sensor09.md)
+* [Camera](camera00.md)
+    * [Camera用の土台の作成](camera01.md) 
 * [Arduino Bluetooth連携](chapter11.md)
    * [事前準備](article2-1.md)
    * [テキスト送受信](article2-2.md)
