@@ -1,5 +1,6 @@
 # Cameraをオープン
 
+StateCallbackの変数を定義し、CameraをOpenします。StateCallbackのonOpen()で取得できるdeviceを用いて、
 
 MainActivity.java
 ```java
@@ -54,8 +55,8 @@ public class MainActivity extends Activity implements TextureView.SurfaceTexture
         mSurfaceTexture = mTextureView.getSurfaceTexture();
     }
 
-    // StateCallback
-    CameraDevice.StateCallback mStateCallback = new CameraDevice.StateCallback()
+    // CameraDeviceのStateCallback
+    CameraDevice.StateCallback mDeviceCallback = new CameraDevice.StateCallback()
     {
         @Override
         public void onDisconnected(CameraDevice device){
@@ -111,7 +112,7 @@ public class MainActivity extends Activity implements TextureView.SurfaceTexture
                     mCameraSize = map.getOutputSizes(SurfaceTexture.class)[0];
 
                     // カメラをオープン
-                    manager.openCamera(cameraId, mStateCallback, null);
+                    manager.openCamera(cameraId, mDeviceCallback, null);
                 }
                 // Backカメラの場合
                 else if (characteristics.get(CameraCharacteristics.LENS_FACING) == CameraCharacteristics.LENS_FACING_BACK)
