@@ -1,2 +1,3 @@
 # CameraManager
 
+Camera2では、CameraManagerを用いてCameraをOpenします。
