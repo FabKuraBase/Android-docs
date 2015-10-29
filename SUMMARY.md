@@ -40,6 +40,8 @@
 * [Camera](camera00.md)
     * [Camera用の土台の作成](camera01.md) 
     * [Cameraの組み込み](camera02.md)
+* [Camera2](camera200.md)
+    * [TextureViewの作成](camera201.md) 
 * [Arduino Bluetooth連携](chapter11.md)
    * [事前準備](article2-1.md)
    * [テキスト送受信](article2-2.md)
