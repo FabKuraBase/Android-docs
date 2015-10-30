@@ -42,6 +42,7 @@
     * [Cameraの組み込み](camera02.md)
     * [Cameraへのオーバーレイ](camera03.md)
     * [CameraとGPS](camera04.md)
+    * [端末の方角の計算](camera05.md)
 * [Camera2](camera200.md)
     * [TextureViewの作成](camera201.md) 
     * [CameraManager](camera202.md) 
