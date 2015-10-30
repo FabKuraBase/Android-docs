@@ -124,3 +124,118 @@ class MyView extends View {
     }
 }
 ```
+
+## 加速度の値をOverlay
+
+MyView.java
+```java
+package utsunomiya.gclue.com.camerasample;
+
+/**
+ * Created by sasakiakira on 15/10/30.
+ */
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.view.MotionEvent;
+import android.view.View;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
+
+import java.util.List;
+
+class MyView extends View implements SensorEventListener {
+
+    /** タッチしたX座標. */
+    private int x;
+    /** タッチしたY座標. */
+    private int y;
+    /** SensorManagerのインスタンス. */
+    private SensorManager mSensorManager = null;
+    /** Log用のTag. */
+    private final static String TAG = "SNESOR";
+
+    /** 加速度X. */
+    private Float acceleroX;
+    /** 加速度Y. */
+    private Float acceleroY;
+    /** 加速度Z. */
+    private Float acceleroZ;
+
+    /**
+     * コンストラクタ.
+     *
+     * @param context
+     */
+    public MyView(Context context) {
+        super(context);
+        setFocusable(true);
+
+        // SensorManager
+        mSensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
+
+        // 加速度の取得とリスナーへの登録
+        List<Sensor> mSensors = mSensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER);
+        if (mSensors.size() > 0) {
+            Sensor sensor = mSensors.get(0);
+            mSensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_FASTEST);
+        }
+    }
+
+    /**
+     * 描画処理.
+     */
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+
+        // 描画するための線の色を設定.
+        Paint mPaint = new Paint();
+        mPaint.setStyle( Paint.Style.FILL );
+        mPaint.setARGB( 255, 255, 255, 100 );
+        mPaint.setTextSize(50);
+
+        // 長方形を描画.
+        canvas.drawRect( x, y, x + 100, y + 100, mPaint );
+
+        // 文字を描画.
+        canvas.drawText("acceleroX:" + acceleroX, 150, 50, mPaint);
+        canvas.drawText("acceleroY:" + acceleroY, 150, 110, mPaint);
+        canvas.drawText("acceleroZ:" + acceleroZ, 150, 170, mPaint);
+    }
+
+    /**
+     * タッチイベント.
+     */
+    public boolean onTouchEvent(MotionEvent event) {
+
+        // X,Y座標の取得.
+        x = (int)event.getX();
+        y = (int)event.getY();
+
+        // 再描画の指示.
+        invalidate();
+
+        return true;
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+            acceleroX = event.values[0];
+            acceleroY = event.values[1];
+            acceleroZ = event.values[2];
+
+            // 再描画の指示.
+            invalidate();
+        }
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+    }
+}
+```
+
