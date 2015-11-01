@@ -47,6 +47,8 @@
     * [TextureViewの作成](camera201.md) 
     * [CameraManager](camera202.md) 
     * [Cameraをオープン](camera203.md)
+* [Intent](intent00.md)
+    * [暗黙的Intent](intent01.md)
 * [Arduino Bluetooth連携](chapter11.md)
    * [事前準備](article2-1.md)
    * [テキスト送受信](article2-2.md)
