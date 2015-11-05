@@ -153,7 +153,7 @@ intent_activity.xml
 ## 送信側
 
 MainActivity.java
-```
+```java
 package utsunomiya.gclue.com.intentsample;
 
 import android.app.Activity;
@@ -248,96 +248,62 @@ public class MainActivity extends Activity implements View.OnClickListener {
 ```
 
 activity_main.xml
+```xml
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intent Sample"
+        android:id="@+id/button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
 ```
-package utsunomiya.gclue.com.intentsample;
 
-import android.app.Activity;
-import android.content.ContentResolver;
-import android.content.ContentValues;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Toast;
-import android.widget.VideoView;
+## AndroidManifestの設定
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+AndroidManifest.xml
+```
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="utsunomiya.gclue.com.intentsample" >
 
-public class MainActivity extends Activity implements View.OnClickListener {
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
 
-    /** Button. */
-    private Button mButton;
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-    /** インテント呼び出し時のRquestCode(任意の値). */
-    static final int REQUEST_INTENT_SAMPLE = 1;
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
-    /** TAG. */
-    private final String TAG = "INTENT";
+        <activity
+            android:name=".IntentActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
-        // xmlからButtonを取り込む
-        mButton = (Button) findViewById(R.id.button);
-        mButton.setOnClickListener(this);
-    }
+    </application>
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+</manifest>
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onClick(View v) {
-
-        if (v.equals(mButton)) {
-
-            Intent mIntent = new Intent();
-            mIntent.putExtra("MYVALUE", "Value of mine");
-            mIntent.setClassName("utsunomiya.gclue.com.intentsample",
-                    "utsunomiya.gclue.com.intentsample.IntentActivity");
-            startActivityForResult(mIntent, REQUEST_INTENT_SAMPLE);
-        }
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        if (requestCode == REQUEST_INTENT_SAMPLE && resultCode == RESULT_OK) {
-            String result = data.getStringExtra("RESULT");
-            Toast.makeText(this, "Result:"+result, Toast.LENGTH_LONG).show();
-        }
-    }
-}
 ```
