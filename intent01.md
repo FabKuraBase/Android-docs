@@ -180,3 +180,14 @@ MainActivity.java
             startActivity(testIntent);
 ```
 
+### 電話をかける
+
+MainActivity.java
+```java
+            Intent testIntent = new Intent();
+            testIntent.setAction(Intent.ACTION_DIAL);
+            Uri uri = Uri.parse("tel:11111111111111");
+            testIntent.setData(uri);
+            startActivity(testIntent);
+```
+
