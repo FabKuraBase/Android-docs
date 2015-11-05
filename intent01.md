@@ -146,7 +146,7 @@ MainActivity.java
             startActivity(testIntent);
 ```
 
-### Mapを起動
+### Mapを起動(緯度/経度)
 
 MainActivity.java
 ```java
