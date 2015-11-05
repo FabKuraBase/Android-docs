@@ -168,5 +168,15 @@ MainActivity.java
             startActivity(testIntent);
 
 ```
+### 削除
+自分自身をパッケージを指定して削除する
 
+MainActivity.java
+```java
+            Intent testIntent = new Intent();
+            testIntent.setAction(Intent.ACTION_DELETE);
+            Uri uri = Uri.fromParts("package", "utsunomiya.gclue.com.intentsample", null);
+            testIntent.setData(uri);
+            startActivity(testIntent);
+```
 
