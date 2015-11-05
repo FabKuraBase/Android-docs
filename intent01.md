@@ -216,6 +216,7 @@ MainActivity.java
 
 ### 文字列を他のアプリに渡す
 
+MainActivity.java
 ```java
             Intent testIntent = new Intent();
             testIntent.setAction(Intent.ACTION_SEND);
