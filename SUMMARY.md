@@ -49,6 +49,7 @@
     * [Cameraをオープン](camera203.md)
 * [Intent](intent00.md)
     * [暗黙的Intent](intent01.md)
+    * [Intentでカメラを操作](intent03.md)
 * [Arduino Bluetooth連携](chapter11.md)
    * [事前準備](article2-1.md)
    * [テキスト送受信](article2-2.md)
