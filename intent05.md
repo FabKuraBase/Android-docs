@@ -65,7 +65,7 @@ Intenr-filterタグでフィルターをかける
 Intentの記述
 ```
 Intent mIntent = new Intent();
-
+mIntent.setAction("アクション名");
 ```
 
 Activityを呼び出す
@@ -79,4 +79,8 @@ Broadcast
 - sendBroadcast(インテント)
 
 ![](img-intent/intent101.png)
+
+# 自作する
+
+
 
