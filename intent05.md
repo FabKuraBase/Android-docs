@@ -80,7 +80,16 @@ Broadcast
 
 ![](img-intent/intent101.png)
 
-# 自作する
+# 受信側Activityを作成する
 
+![](img-intent/intent102.png)
+
+![](img-intent/intent103.png)
+
+
+
+![](img-intent/intent104.png)
+
+![](img-intent/intent105.png)
 
 
