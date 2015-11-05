@@ -1,7 +1,5 @@
 # Intentでビデオを操作
 
-## AndroidManifest.xml
-
 AndroidManifest.xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
