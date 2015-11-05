@@ -58,3 +58,25 @@ Intenr-filterタグでフィルターをかける
             </intent-filter>
 
 
+# 呼び出し時に呼ばれるメソッド
+
+## 呼び出し側
+
+Intentの記述
+```
+Intent mIntent = new Intent();
+
+```
+
+Activityを呼び出す
+- startActivity(インテント)
+- startActivityForResult(インテント)
+
+Serviceを呼び出す
+- startService(インテント)
+
+Broadcast
+- sendBroadcast(インテント)
+
+![](img-intent/intent101.png)
+
