@@ -146,3 +146,14 @@ MainActivity.java
             startActivity(testIntent);
 ```
 
+### Mapを起動
+
+MainActivity.java
+```java
+            Intent testIntent = new Intent();
+            testIntent.setAction(Intent.ACTION_VIEW);
+            Uri uri = Uri.parse("geo:35.658625,139.745415");
+            testIntent.setData(uri);
+            startActivity(testIntent);
+```
+
