@@ -51,6 +51,7 @@
     * [暗黙的Intent](intent01.md)
     * [Intentでカメラを操作](intent03.md)
     * [Intentでビデオを操作](intent04.md)
+    * [Intentを作成する](intent05.md)
 * [Arduino Bluetooth連携](chapter11.md)
    * [事前準備](article2-1.md)
    * [テキスト送受信](article2-2.md)
