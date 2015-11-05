@@ -137,3 +137,12 @@ MainActivity.java
 
 ### Browserを起動
 
+MainActivity.java
+```java
+            Intent testIntent = new Intent();
+            testIntent.setAction(Intent.ACTION_VIEW);
+            Uri uri = Uri.parse("http://www.gclue.com/");
+            testIntent.setData(uri);
+            startActivity(testIntent);
+```
+
