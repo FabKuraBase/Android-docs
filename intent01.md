@@ -89,3 +89,51 @@ activity_main.xml
 
 </RelativeLayout>
 ```
+
+![](./img-intent/intent001.png)
+
+
+## Intent.ACTION_VIEW
+
+MainActivity.java
+```java
+
+            Intent testIntent = new Intent();
+            testIntent.setAction(Intent.ACTION_VIEW);
+            startActivity(testIntent);
+```
+
+## ACTION_DIAL
+
+MainActivity.java
+```java
+
+            Intent testIntent = new Intent();
+            testIntent.setAction(Intent.ACTION_DIAL);
+            startActivity(testIntent);
+```
+
+## ActionとCategoryを指定
+
+MainActivity.java
+```java
+            Intent testIntent = new Intent();
+            testIntent.setAction(Intent.ACTION_MAIN);
+            testIntent.addCategory(Intent.CATEGORY_DEFAULT);
+            startActivity(testIntent);
+```
+
+## ActionとCategoryを指定
+
+MainActivity.java
+```java
+            Intent testIntent = new Intent();
+            testIntent.setAction(Intent.ACTION_MAIN);
+            testIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+            startActivity(testIntent);
+```
+
+## ACTIONとDATAを指定
+
+### Browserを起動
+
