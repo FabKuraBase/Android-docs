@@ -191,3 +191,16 @@ MainActivity.java
             startActivity(testIntent);
 ```
 
+### メールを送る
+MainActivity.java
+```java
+            Intent testIntent = new Intent();
+            testIntent.setAction(Intent.ACTION_SENDTO);
+            Uri uri=Uri.parse("mailto:test@gclue.jp");
+            testIntent.setData(uri);
+            testIntent.putExtra(Intent.EXTRA_SUBJECT,"Subject");
+            testIntent.putExtra(Intent.EXTRA_TEXT,"Text of main");
+            startActivity(testIntent);
+```
+    
+
