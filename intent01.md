@@ -204,3 +204,13 @@ MainActivity.java
 ```
     
 
+### 検索の機能をもったアプリを探す
+
+MainActivity.java
+```java
+            Intent testIntent = new Intent();
+            testIntent.setAction(Intent.ACTION_SEARCH);
+            testIntent.putExtra("query","Android");
+            startActivity(testIntent);
+```
+
