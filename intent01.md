@@ -214,3 +214,12 @@ MainActivity.java
             startActivity(testIntent);
 ```
 
+### 文字列を他のアプリに渡す
+
+```java
+            Intent testIntent = new Intent();
+            testIntent.setAction(Intent.ACTION_SEND);
+            testIntent.setType("text/plain");
+            testIntent.putExtra(Intent.EXTRA_TEXT, "Data sending");
+            startActivity(testIntent);
+```
