@@ -116,13 +116,11 @@ AndroidManifest.xml
         android:layout_alignParentStart="true" />
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/imageView"
-        android:layout_centerVertical="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="133dp" />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView" />
 
 </RelativeLayout>
+
 
 ```
