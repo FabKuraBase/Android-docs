@@ -157,3 +157,16 @@ MainActivity.java
             startActivity(testIntent);
 ```
 
+### Mapを起動(検索ワード)
+
+MainActivity.java
+```java
+            Intent testIntent = new Intent();
+            testIntent.setAction(Intent.ACTION_VIEW);
+            Uri uri = Uri.parse("geo:0,0?q=sendai");
+            testIntent.setData(uri);
+            startActivity(testIntent);
+
+```
+
+
