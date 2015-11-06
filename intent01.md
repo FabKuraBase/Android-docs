@@ -224,3 +224,8 @@ MainActivity.java
             testIntent.putExtra(Intent.EXTRA_TEXT, "Data sending");
             startActivity(testIntent);
 ```
+
+
+## Reference
+
+http://developer.android.com/intl/ja/reference/android/content/Intent.html
