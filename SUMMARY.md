@@ -48,7 +48,7 @@
     * [CameraManager](camera202.md) 
     * [Cameraをオープン](camera203.md)
 * [Intent](intent00.md)
-    * [暗黙的Intent](intent01.md)
+    * [暗示的Intent](intent01.md)
     * [Intentでカメラを操作](intent03.md)
     * [Intentでビデオを操作](intent04.md)
     * [Intentを作成する](intent05.md)
