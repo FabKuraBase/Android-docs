@@ -34,6 +34,7 @@ Arduino UNOとArduino MEGAでは回路とスケッチが異なりますので別
 #include <SoftwareSerial.h>
 
 SoftwareSerial android(2,3);
+// SoftwareSerial android(10,11); // Fabo Brick使用時
 
 void setup(){
   // Bluetooth用のシリアルのポートを設定
