@@ -9,6 +9,7 @@
 まずはArduino側の設定を行います。
 <br>
 回路については「１.事前準備」で作成した回路を使用します。
+<br>
 Arduino UNOとArduino MEGAでは回路とスケッチが異なりますので別々に記載します。
 
 回路ができましたらスケッチを書いてみましょう。
@@ -24,8 +25,6 @@ Arduino UNOとArduino MEGAでは回路とスケッチが異なりますので別
 
 #### 回路 (Arduino Uno)
 
-
-<br>
 ![](bt2-02.jpg)
 
 
@@ -59,10 +58,7 @@ void loop(){
 }
 ```
 
-
-
 ### Arduino Mega
-
 
 #### 回路 (Arduino Mega)
 <br>
@@ -111,21 +107,18 @@ void loop(){
 }
 ```
 
-
-
 ## AndroidのProject作成
 
 次にAndroid側のアプリを作成します。
 <br>
 Androidのアプリ作成には「Android Studio」を使用します。
-起動しましたらQuick Startの一番上にある「Start a new Android Studio project」を選択します。
+<br>
+Android Studioを起動し、Quick Startの一番上にある「Start a new Android Studio project」を選択します。
 <br>
 ![](bt2-04.jpg)
 
-
-
-
 New Projectのウィンドウが表示されます。
+<br>
 Application nameにアプリ名を入力し、「Next」ボタンを押下します。
 <br>
 ![](bt2-05.jpg)
@@ -145,7 +138,6 @@ Activityの名前を入力し、「Finish」ボタンを押下します。
 <br>
 ![](bt2-09.jpg)
 
-
 プロジェクトが作成されました。
 <br>
 ![](bt2-10.jpg)
@@ -155,8 +147,6 @@ Activityの名前を入力し、「Finish」ボタンを押下します。
 <br>
 ![](bt2-11.jpg)
 
- 
-
 ビューの表示形式が変更されました。
 ![](bt2-12.jpg)
  
@@ -164,8 +154,8 @@ Activityの名前を入力し、「Finish」ボタンを押下します。
 ## Bluetooth認識設定
 
 
-次にBluetoothの認識設定を行います。<br>
-
+次にBluetoothの認識設定を行います。
+<br>
 [src]>[main]>[res]内のAndroidManifest.xmlを開き、青で記載している箇所を追加します。
 
 #### AndroidManifest.xml
@@ -201,6 +191,7 @@ Activityの名前を入力し、「Finish」ボタンを押下します。
 ## プログラム作成
 
 次に[src]にある「MainActivity.java」を開き、プログラムを入力します。
+<br>
 なお、"RNBT-205F"は「１.BLUETOOTH 事前準備」のペアリング時にでてきたデバイス名となりますので、それに合わせて変更して下さい。
 
 #### MainActivity.java
