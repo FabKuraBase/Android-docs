@@ -24,6 +24,7 @@ BrickのLEDの場合は13ピンに接続してください。
 #include <SoftwareSerial.h>
 
 SoftwareSerial android(2,3);
+// SoftwareSerial android(10,11); // FaBo Brick使用時
 
 int led = 13;   // 13番ピンにてLEDを制御
 int inByte = 0; // androidからのテキスト取得用
@@ -407,9 +408,8 @@ activity_main.xml
 </LinearLayout>
 ```
 
+### 実行確認
 
-それでは実行してみましょう。
-<br>
 Android端末にボタンが表示されますので、「Connect」ボタンを押します。
 <br>
 ![](bt3-03.jpg)
