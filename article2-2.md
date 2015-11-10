@@ -130,7 +130,7 @@ Application nameにアプリ名を入力し、「Next」ボタンを押下しま
 
 Blank Activityを選択し、「Next」ボタンを押下します。
 <br>
-![](bt2-07.jpg)
+![](bt2-08.jpg)
  
 
 Activityの名前を入力し、「Finish」ボタンを押下します。
