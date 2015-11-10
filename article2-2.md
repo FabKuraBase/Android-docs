@@ -156,7 +156,7 @@ Activityの名前を入力し、「Finish」ボタンを押下します。
 
 次にBluetoothの認識設定を行います。
 <br>
-[src]>[main]>[res]内のAndroidManifest.xmlを開き、下記の内容を追加します。
+[app]>[src]>[main]>[res]内のAndroidManifest.xmlを開き、下記の内容を追加します。
 
 ```xml
 <uses-permission android:name="android.permission.BLUETOOTH" />
