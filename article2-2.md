@@ -143,6 +143,7 @@ Activityの名前を入力し、「Finish」ボタンを押下します。
 ![](bt2-10.jpg)
 
 ビューの表示形式を変更します。
+<br>
 画面左上にある「Android」という箇所をクリックすると、すぐ下に「Project」という項目が表示されるので、そちらを選択します。
 <br>
 ![](bt2-11.jpg)
@@ -153,13 +154,17 @@ Activityの名前を入力し、「Finish」ボタンを押下します。
 
 ## Bluetooth認識設定
 
-
 次にBluetoothの認識設定を行います。
 <br>
-[src]>[main]>[res]内のAndroidManifest.xmlを開き、青で記載している箇所を追加します。
+[src]>[main]>[res]内のAndroidManifest.xmlを開き、下記の内容を追加します。
 
+```xml
+<uses-permission android:name="android.permission.BLUETOOTH" />
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+```
+    
 #### AndroidManifest.xml
-
+変更後はこのような状態になります。
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -192,7 +197,9 @@ Activityの名前を入力し、「Finish」ボタンを押下します。
 
 次に[src]にある「MainActivity.java」を開き、プログラムを入力します。
 <br>
-なお、"RNBT-205F"は「１.BLUETOOTH 事前準備」のペアリング時にでてきたデバイス名となりますので、それに合わせて変更して下さい。
+１行目のpackageの箇所は環境によって異なりますので、初期状態から変更せずそのままの状態にしてください。
+
+また、"RNBT-205F"は「１.BLUETOOTH 事前準備」のペアリング時にでてきたデバイス名となりますので、それに合わせて変更して下さい。
 
 #### MainActivity.java
 
@@ -426,6 +433,9 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
 [src]>[main]>[res]>[layout]内にありますactivity_main.xmlを変更します。
 <br>
 このファイルは画面レイアウトの設定するファイルになります。
+<br>
+activity_main.xmlファイルを開くとレイアウトが表示されるので、画面右下のタブから「Text」のタブを選択することでコードが入力できる状態になります。
+
 
 activity_main.xml
 ```xml
