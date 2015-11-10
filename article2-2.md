@@ -479,6 +479,7 @@ activity_main.xml
 ![](bt2-12.jpg)
 
 AndroidのConnectボタンを押すと、１〜３秒ほどで赤点滅から緑の点灯にかわります。
+<br>
 これでデータが送受信できる状態になりました。
 <br>
 ![](bt2-13.jpg)
