@@ -17,13 +17,14 @@
 
 #### スケッチ (Arduino Uno)
 
-```
+```c
 #include <SoftwareSerial.h>
 
 SoftwareSerial android(2,3);
+//SoftwareSerial android(10,11); // FaBo Brick使用時
 
-int led = 13;    // 13番ピンにてLEDを制御
-int inByte = 0; // androidからのテキスト取得用
+int led = 13;      // 13番ピンにてLEDを制御
+int inByte = 0;    // androidからのテキスト取得用
 int sensorPin = 0; // センサーを使用するピン
 int getSensor = 0; // センサーデータ取得用
 
@@ -63,10 +64,7 @@ void loop(){
 }
 ```
 
-
-
 ### Arduino Mega
-
 
 #### 回路 (Arduino Mega)
 <br>
@@ -74,9 +72,9 @@ void loop(){
 
 
 スケッチ (Arduino Mega)
-```
-int led = 13;    // 13番ピンにてLEDを制御
-int inByte = 0; // androidからのテキスト取得用
+```c
+int led = 13;      // 13番ピンにてLEDを制御
+int inByte = 0;    // androidからのテキスト取得用
 int sensorPin = 0; // センサーを使用するピン
 int getSensor = 0; // センサーデータ取得用
 
@@ -121,7 +119,7 @@ void loop(){
 次にAndroid側のコーディングをします。
 
 BluetoothServer.java
-```
+```java
 package gclue.com.mybluetooth;
 
 import android.bluetooth.BluetoothAdapter;
@@ -383,12 +381,10 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
         }
     };
 }
-
 ```
-
 
 activity_main.xml
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
@@ -432,8 +428,7 @@ activity_main.xml
 ```
 
 
-それでは実行してみましょう。
-<br>
+### 実行確認
 Android端末にボタンが表示されますので、前回と同様「Connect」ボタンを押します。
 <br>
 Sensorボタンを押して値の確認をしてみましょう。
