@@ -59,6 +59,7 @@
    * [テキスト送受信](article2-2.md)
    * [AndroidからLED操作](article2-3.md)
    * [センサーデータをAndroid端末で表示](article2-4.md)
+   * [ロボットカー制御](article2-5.md)
 * [Arduino USB Host連携](chapter12.md)
    * [事前準備](article3-1.md)
    * [テキスト送信](article3-2.md)
