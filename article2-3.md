@@ -17,7 +17,7 @@
 
 #### スケッチ (Arduino Uno)
 
-```
+```c
 #include <SoftwareSerial.h>
 
 SoftwareSerial android(2,3);
@@ -76,7 +76,7 @@ http://e-words.jp/p/r-ascii.html
 
 #### スケッチ (Arduino Mega)
 
-```
+```c
 int led = 13;    // 13番ピンにてLEDを制御
 int inByte = 0; // androidからのテキスト取得用
 
@@ -115,7 +115,7 @@ void loop(){
 ## Android設定
 
 MainActivity.java
-```
+```java
 package com.gclue.mybluetooth;
 
 import android.bluetooth.BluetoothAdapter;
@@ -365,7 +365,7 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
 
 
 activity_main.xml
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
