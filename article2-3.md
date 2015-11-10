@@ -6,7 +6,10 @@
 
 
 今回LEDしますが、LEDにはプラスマイナスの向きがありますので注意して下さい。
+<br>
 長い方がプラス(この場合は13ピン)になります。
+
+BrickのLEDの場合は13ピンに接続してください。
 
 ### Arduino Uno
 
@@ -22,7 +25,7 @@
 
 SoftwareSerial android(2,3);
 
-int led = 13;    // 13番ピンにてLEDを制御
+int led = 13;   // 13番ピンにてLEDを制御
 int inByte = 0; // androidからのテキスト取得用
 
 void setup(){
