@@ -61,6 +61,12 @@ Macの場合、Android Studio 1.0のインストール画面が表示される�
 set JAVA_HOME
 ```
 
+### Macの場合
+Macの場合、JAVA_HOMEが設定されていない場合、下記のコマンドにて表示されたパスが設定されるので、そちらで取得できれば問題ない
+
+```
+/usr/libexec/java_home
+```
 ## SourceTreeのインストール
 
 SourceTreeをダウンロードする。
