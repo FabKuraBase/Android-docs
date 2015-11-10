@@ -12,7 +12,7 @@
 ### 準備するもの
 
 
-・Android開発環境 (eclipse)
+・Android開発環境 (android studio)
 
 ・Android端末(スマートフォン)
 データ通信ケーブル(USB-USBmini)
@@ -21,7 +21,7 @@
 <br>
 http://arduino.cc/en/Main/ArduinoBoardUno
 
-・Bluetooth Mate 
+・Bluetooth Mate (またはFaBo BrickのBluetooth)
 <br>
 https://www.sparkfun.com/products/12580
 
