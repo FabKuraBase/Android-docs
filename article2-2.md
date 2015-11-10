@@ -12,6 +12,7 @@
 Arduino UNOとArduino MEGAでは回路とスケッチが異なりますので別々に記載します。
 
 回路ができましたらスケッチを書いてみましょう。
+<br>
 スケッチはArduino IDEを起動して行います。
 <br>
 ![](bt2-01.jpg)
@@ -30,7 +31,7 @@ Arduino UNOとArduino MEGAでは回路とスケッチが異なりますので別
 
 #### スケッチ (Arduino UNO)
 
-```
+```c
 #include <SoftwareSerial.h>
 
 SoftwareSerial android(2,3);
@@ -73,21 +74,21 @@ void loop(){
 Arduino MegaではSoftserialがうまく動かないので18, 19番ピンを使用します。
 
 18,19番ピンは
-```
+```c
 Serial1.begin(速度);
 ```
 
 で呼び出せます。
 
 Bluetoothモジュールと、Android間はデフォルトで、115200の速度なので
-```
+```c
 Serial1.begin(115200);
 ```
 
 とします。
 
 変更後はこちら
-```
+```c
 void setup(){
   // Bluetooth用のシリアルのポートを設定
   Serial1.begin(115200);
@@ -163,12 +164,13 @@ Activityの名前を入力し、「Finish」ボタンを押下します。
 ## Bluetooth認識設定
 
 
-次にBluetoothの認識設定を行います。
+次にBluetoothの認識設定を行います。<br>
+
 [src]>[main]>[res]内のAndroidManifest.xmlを開き、青で記載している箇所を追加します。
 
 #### AndroidManifest.xml
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="gclue.com.mybluetooth" >
@@ -203,7 +205,7 @@ Activityの名前を入力し、「Finish」ボタンを押下します。
 
 #### MainActivity.java
 
-```
+```java
 package gclue.com.mybluetooth;
 
 import android.bluetooth.BluetoothAdapter;
@@ -431,10 +433,11 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
 
 
 [src]>[main]>[res]>[layout]内にありますactivity_main.xmlを変更します。
+<br>
 このファイルは画面レイアウトの設定するファイルになります。
 
 activity_main.xml
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
@@ -467,8 +470,9 @@ activity_main.xml
 ```
 
 
-Android端末での実行設定
-アプリケーション実行、及び確認
+###Android端末での実行設定
+**アプリケーション実行、及び確認**
+<br>
 準備が完了しましたので、作成したアプリケーションを実行してみましょう。
 <br>
 ![](bt2-12.jpg)
@@ -485,6 +489,7 @@ Connectが完了しましたら、次にAndroidのWriteボタンを押します�
 
 
 Arduino側のシリアルモニタを確認すると、50(2のasciiコード)が転送されます。
+<br>
 ※Arduino側でSerial.write(取得値)とするか、char型の変数に格納してから出力すると「2」が出力されます。
 <br>
 ![](bt2-15.jpg)
