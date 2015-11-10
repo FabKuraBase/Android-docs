@@ -406,11 +406,13 @@ activity_main.xml
 
 
 それでは実行してみましょう。
+<br>
 Android端末にボタンが表示されますので、「Connect」ボタンを押します。
 <br>
 ![](bt3-03.jpg)
 
 Bluetoothモジュールの赤い点滅が消え、緑のランプが点灯しました。
+<br>
 この状態で「LED ON」ボタンを押します。
 <br>
 ![](bt3-04.jpg)
