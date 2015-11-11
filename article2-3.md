@@ -277,6 +277,8 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
         super.onPause();
 
         isRunning = false;
+        connectFlg = false;
+        
         try{
             mSocket.close();
         }
@@ -343,7 +345,8 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
             try{
                 mSocket.close();
             }catch(Exception ee){}
-            isRunning = false;
+            isRunning  = false;
+            connectFlg = false;
         }
     }
 
