@@ -32,7 +32,7 @@ https://fabo.gitbooks.io/module/content/brick_serial_bluetooth/brick_serial_blue
 #define left_pow 6  // 左タイヤのモーター出力設定用ピン
 #define left_b 7    // 左タイヤのモーター用ピン(後退用)
 
-SoftwareSerial android(11, 10); // Bluetooth用シリアル通信ピン
+SoftwareSerial android(10, 11); // Bluetooth用シリアル通信ピン
 
 char readData = 0;  // androidからのテキスト取得用
 
