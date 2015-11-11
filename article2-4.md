@@ -20,12 +20,13 @@
 ```c
 #include <SoftwareSerial.h>
 
+#define led 13      // 13番ピンにてLEDを制御
+#define sensorPin 0 // センサーを使用するピン
+
 SoftwareSerial android(2,3);
 //SoftwareSerial android(10,11); // FaBo Brick使用時
 
-int led = 13;      // 13番ピンにてLEDを制御
 int inByte = 0;    // androidからのテキスト取得用
-int sensorPin = 0; // センサーを使用するピン
 int getSensor = 0; // センサーデータ取得用
 
 void setup(){
