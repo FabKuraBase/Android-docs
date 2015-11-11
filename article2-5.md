@@ -191,10 +191,10 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
     /* Bluetoothデバイス */
     private BluetoothDevice mDevice;
 
-    /* Bluetooth UUID */
+    /* Bluetooth UUID (固定）*/
     private final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
-    /* デバイス名 */
+    /* デバイス名 環境に合ったものに変更*/
     private final String DEVICE_NAME = "RNBT-71EE";
 
     /* Soket */
@@ -252,7 +252,7 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
         backButton  = (Button)findViewById(R.id.backButton);
         stopButton  = (Button)findViewById(R.id.stopButton);
 
-        // ボタンのイベント取得設定
+        // ボタンのイベント設定
         connectButton.setOnClickListener(this);
         forwardButton.setOnClickListener(this);
         backButton.setOnClickListener(this);
@@ -334,7 +334,6 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
                     mHandler.sendMessage(valueMsg);
                 }
             }
-
         }
         // エラー処理
         catch(Exception e){
@@ -448,3 +447,19 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
 }
 ```
 
+これでプログラムは完了です。
+
+まず、ロボットカーに単三電池４本(モーター用)、9V電池(Arduino電源用)を接続します。
+
+AndroidとBluetooth接続し、画面のボタンからロボットカーを操作してみてください。
+
+
+ここまで出来たら以下の内容を試してみましょう。
+
+１．右旋回、左旋回機能を追加
+<br>
+２．速度変更
+<br>
+３．センサーを接続し、取得した値をAndroid端末に送信
+<br>
+４．センサーの値により動作変更（暗くなったら遅くなるなど）
