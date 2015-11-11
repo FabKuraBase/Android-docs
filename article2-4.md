@@ -198,17 +198,21 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        // Layoutにて設定したビューを表示
         setContentView(R.layout.activity_main);
 
+        // TextViewの設定(Layoutにて設定したものを関連付け)
         mInputTextView = (TextView)findViewById(R.id.inputValue);
         mStatusTextView = (TextView)findViewById(R.id.statusValue);
+
+        // Buttonの設定(Layoutにて設定したものを関連付け)
         connectButton = (Button)findViewById(R.id.connectButton);
         ledOnButton = (Button)findViewById(R.id.ledOnButton);
         ledOffButton = (Button)findViewById(R.id.ledOffButton);
         sensorButton = (Button)findViewById(R.id.sensorButton);
 
+        // ボタンのイベント取得設定
         connectButton.setOnClickListener(this);
-
         ledOnButton.setOnClickListener(this);
         ledOffButton.setOnClickListener(this);
         sensorButton.setOnClickListener(this);
@@ -229,17 +233,21 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
 
     }
 
+    // 別のアクティビティが起動した場合の処理
     @Override
     protected void onPause(){
         super.onPause();
 
         isRunning = false;
+        connectFlg = false;
+        
         try{
             mSocket.close();
         }
         catch(Exception e){}
     }
 
+    // スレッド処理(connectボタン押下後に実行)
     @Override
     public void run() {
         InputStream mmInStream = null;
@@ -286,15 +294,11 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
                     valueMsg.obj = readMsg;
                     mHandler.sendMessage(valueMsg);
                 }
-                else{
-                    // Log.i(TAG,"value=nodata");
-                }
-
-                //Thread.sleep(10);
-
             }
 
-        }catch(Exception e){
+        }
+        // エラー処理
+        catch(Exception e){
 
             valueMsg = new Message();
             valueMsg.what = VIEW_STATUS;
@@ -305,6 +309,7 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
                 mSocket.close();
             }catch(Exception ee){}
             isRunning = false;
+            connectFlg = false;
         }
     }
 
