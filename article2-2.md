@@ -195,6 +195,46 @@ Activityの名前を入力し、「Finish」ボタンを押下します。
 
 ## プログラム作成
 
+[src]>[main]>[res]>[layout]内にあるactivity_main.xmlを変更します。
+<br>
+このファイルは画面レイアウトの設定するファイルになります。
+<br>
+activity_main.xmlファイルを開くとレイアウトが表示されるので、画面右下のタブから「Text」のタブを選択することでコードが入力できる状態になります。
+
+
+activity_main.xml
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button android:id="@+id/connectButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect" />
+
+    <TextView
+        android:id="@+id/statusValue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/inputValue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Button android:id="@+id/writeButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Write" />
+
+</LinearLayout>
+```
+
 次に[src]にある「MainActivity.java」を開き、プログラムを入力します。
 <br>
 １行目のpackageの箇所は環境によって異なりますので、初期状態から変更せずそのままの状態にしてください。
@@ -234,10 +274,10 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
     /* Bluetoothデバイス */
     private BluetoothDevice mDevice;
 
-    /* Bluetooth UUID */
+    /* Bluetooth UUID(固定) */
     private final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
-    /* デバイス名 */
+    /* デバイス名 環境に合わせて変更*/
     private final String DEVICE_NAME = "RNBT-205F";
 
     /* Soket */
@@ -276,14 +316,18 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        // Layoutにて設定したビューを表示
         setContentView(R.layout.activity_main);
 
+        // TextViewの設定(Layoutにて設定したものを関連付け)
         mInputTextView = (TextView)findViewById(R.id.inputValue);
         mStatusTextView = (TextView)findViewById(R.id.statusValue);
 
+        // Buttonの設定(Layoutにて設定したものを関連付け)
         connectButton = (Button)findViewById(R.id.connectButton);
         writeButton = (Button)findViewById(R.id.writeButton);
 
+        // ボタンのイベント設定
         connectButton.setOnClickListener(this);
         writeButton.setOnClickListener(this);
 
@@ -300,20 +344,23 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
                 mDevice = device;
             }
         }
-
     }
 
+    // 別のアクティビティが起動した場合の処理
     @Override
     protected void onPause(){
         super.onPause();
 
         isRunning = false;
+        connectFlg = false;
+
         try{
             mSocket.close();
         }
         catch(Exception e){}
     }
 
+    // スレッド処理(connectボタン押下後に実行)
     @Override
     public void run() {
         InputStream mmInStream = null;
@@ -360,12 +407,10 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
                     valueMsg.obj = readMsg;
                     mHandler.sendMessage(valueMsg);
                 }
-                else{
-                    // Log.i(TAG,"value=nodata");
-                }
-
             }
-        }catch(Exception e){
+        }
+        // エラー処理
+        catch(Exception e){
 
             valueMsg = new Message();
             valueMsg.what = VIEW_STATUS;
@@ -380,6 +425,7 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
         }
     }
 
+    // ボタン押下時の処理
     @Override
     public void onClick(View v) {
         if(v.equals(connectButton)) {
@@ -396,12 +442,14 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
             // 接続中のみ書込みを行う
             if (connectFlg) {
                 try {
+                    // Writeボタン押下時、'2'を送信
                     mmOutputStream.write("2".getBytes());
+                    // 画面上に"Write:"を表示
                     mStatusTextView.setText("Write:");
                 } catch (IOException e) {
                     Message valueMsg = new Message();
                     valueMsg.what = VIEW_STATUS;
-                    valueMsg.obj = "Error3:" + e;
+                    valueMsg.obj = "Error2:" + e;
                     mHandler.sendMessage(valueMsg);
                 }
             } else {
@@ -428,48 +476,6 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
     };
 }
 ```
-
-
-[src]>[main]>[res]>[layout]内にありますactivity_main.xmlを変更します。
-<br>
-このファイルは画面レイアウトの設定するファイルになります。
-<br>
-activity_main.xmlファイルを開くとレイアウトが表示されるので、画面右下のタブから「Text」のタブを選択することでコードが入力できる状態になります。
-
-
-activity_main.xml
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
-
-    <Button android:id="@+id/connectButton"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Connect" />
-
-    <TextView
-        android:id="@+id/statusValue"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        />
-
-    <TextView
-        android:id="@+id/inputValue"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        />
-
-    <Button android:id="@+id/writeButton"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Write" />
-
-</LinearLayout>
-```
-
 
 ###Android端末での実行設定
 **アプリケーション実行、及び確認**
