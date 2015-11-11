@@ -22,10 +22,11 @@ BrickのLEDの場合は13ピンに接続してください。
 ```c
 #include <SoftwareSerial.h>
 
+#define led 13   // 13番ピンにてLEDを制御
+
 SoftwareSerial android(2,3);
 // SoftwareSerial android(10,11); // FaBo Brick使用時
 
-int led = 13;   // 13番ピンにてLEDを制御
 int inByte = 0; // androidからのテキスト取得用
 
 void setup(){
@@ -80,7 +81,8 @@ http://e-words.jp/p/r-ascii.html
 #### スケッチ (Arduino Mega)
 
 ```c
-int led = 13;    // 13番ピンにてLEDを制御
+#define led 13  // 13番ピンにてLEDを制御
+
 int inByte = 0; // androidからのテキスト取得用
 
 void setup(){
@@ -117,6 +119,48 @@ void loop(){
 
 ## Android設定
 
+
+activity_main.xml
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button android:id="@+id/connectButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect" />
+
+    <TextView
+        android:id="@+id/statusValue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/inputValue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Button android:id="@+id/ledOnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="LED ON" />
+
+    <Button android:id="@+id/ledOffButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="LED OFF" />
+
+</LinearLayout>
+```
+
+
 MainActivity.java
 ```java
 package com.gclue.mybluetooth;
@@ -132,8 +176,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import com.gclue.mybluetooth.R;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -196,16 +238,20 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        // Layoutにて設定したビューを表示
         setContentView(R.layout.activity_main);
 
+        // TextViewの設定(Layoutにて設定したものを関連付け)
         mInputTextView = (TextView)findViewById(R.id.inputValue);
         mStatusTextView = (TextView)findViewById(R.id.statusValue);
+
+        // Buttonの設定(Layoutにて設定したものを関連付け)
         connectButton = (Button)findViewById(R.id.connectButton);
         ledOnButton = (Button)findViewById(R.id.ledOnButton);
         ledOffButton = (Button)findViewById(R.id.ledOffButton);
 
+        // Buttonのイベント設定
         connectButton.setOnClickListener(this);
-
         ledOnButton.setOnClickListener(this);
         ledOffButton.setOnClickListener(this);
 
@@ -225,6 +271,7 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
 
     }
 
+    // 別のアクティビティが起動した場合の処理
     @Override
     protected void onPause(){
         super.onPause();
@@ -236,6 +283,7 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
         catch(Exception e){}
     }
 
+    // スレッド処理(connectボタン押下後に実行)
     @Override
     public void run() {
         InputStream mmInStream = null;
@@ -246,7 +294,6 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
         mHandler.sendMessage(valueMsg);
 
         try{
-
             // 取得したデバイス名を使ってBluetoothでSocket接続
             mSocket = mDevice.createRfcommSocketToServiceRecord(MY_UUID);
             mSocket.connect();
@@ -282,15 +329,11 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
                     valueMsg.obj = readMsg;
                     mHandler.sendMessage(valueMsg);
                 }
-                else{
-                    // Log.i(TAG,"value=nodata");
-                }
-
-                //Thread.sleep(10);
-
             }
 
-        }catch(Exception e){
+        }
+        // エラー処理
+        catch(Exception e){
 
             valueMsg = new Message();
             valueMsg.what = VIEW_STATUS;
@@ -304,8 +347,10 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
         }
     }
 
+    // ボタン押下時の処理
     @Override
     public void onClick(View v) {
+        // Connectボタン
         if(v.equals(connectButton)) {
             if(!connectFlg) {
 
@@ -316,7 +361,9 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
                 isRunning = true;
                 mThread.start();
             }
-       } else if(v.equals(ledOnButton)) {
+        }
+        // ledOnボタン
+        else if(v.equals(ledOnButton)) {
             if(connectFlg) {
                 try {
                     mmOutputStream.write("1".getBytes());
@@ -330,7 +377,9 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
             } else {
                 mStatusTextView.setText("Please push the connect button");
             }
-        } else if(v.equals(ledOffButton)) {
+        }
+        // ledOffボタン
+        else if(v.equals(ledOffButton)) {
             if(connectFlg) {
                 try {
                     mmOutputStream.write("0".getBytes());
@@ -364,47 +413,6 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
         }
     };
 }
-```
-
-
-activity_main.xml
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
-
-    <Button android:id="@+id/connectButton"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Connect" />
-
-    <TextView
-        android:id="@+id/statusValue"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        />
-
-    <TextView
-        android:id="@+id/inputValue"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        />
-
-    <Button android:id="@+id/ledOnButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="LED ON" />
-
-    <Button android:id="@+id/ledOffButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="LED OFF" />
-
-</LinearLayout>
 ```
 
 ### 実行確認
