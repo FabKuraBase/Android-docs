@@ -119,7 +119,7 @@ Android Studioを起動し、Quick Startの一番上にある「Start a new Andr
 
 New Projectのウィンドウが表示されます。
 <br>
-Application nameにアプリ名を入力し、「Next」ボタンを押下します。
+Application nameにアプリ名「MyBluetooth」を入力し、「Next」ボタンを押下します。
 <br>
 ![](bt2-05.jpg)
 
@@ -134,6 +134,7 @@ Blank Activityを選択し、「Next」ボタンを押下します。
  
 
 Activityの名前を入力し、「Finish」ボタンを押下します。
+<br>
 今回は名前を変更せずに進めます。
 <br>
 ![](bt2-09.jpg)
