@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         android:layout_height="wrap_content"
         android:id="@+id/testView1"
         android:background="#ff0000"
+        android:textColor="#00ff00"
         />
 
 </RelativeLayout>
