@@ -37,8 +37,8 @@ Phone and TabletnおMinimum SDKでは、サポートする最低レベルのAPI�
 
 ![pre0205](img-chapter02/pre0205.png)
 
-| 番号 | ファイルの内容 |
-| -- | -- |
+| 番号 | ファイル名 | ファイルの内容 |
+| -- | -- | -- |
 |①| AndroidManifest.xml | AndroidのManifest情報を記載 |
 |②| MainActivity.java | 起動時に呼ばれるActivity |
 |③| activity_main.xml | ActivityのUIレイアウト |
