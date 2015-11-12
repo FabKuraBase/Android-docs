@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-## TextViewに色をつける
+## TextViewの背景に色をつける
 
 
 ```xml
@@ -76,8 +76,10 @@ public class MainActivity extends AppCompatActivity {
         android:layout_height="wrap_content"
         android:id="@+id/testView1"
         android:background="#ff0000"
-
         />
 
 </RelativeLayout>
 ```
+
+## TextViewの文字に色をつける
+
