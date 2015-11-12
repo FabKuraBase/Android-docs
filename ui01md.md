@@ -59,3 +59,5 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
+## TextViewに色をつける
+
