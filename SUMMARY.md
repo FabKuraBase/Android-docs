@@ -55,7 +55,7 @@
 * [WebView](webview00.md)
    * [WebView表示](webview01.md)
 * [UI Layout](ui00.md)
-   * [FindViewById](ui01md.md)
+   * [FindViewById](ui01.md)
    * [XMLでのLayout1](ui02.md)
    * [XMLでのLayout2](ui03.md)
 * [Arduino Bluetooth連携](chapter11.md)
