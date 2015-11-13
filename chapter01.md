@@ -67,6 +67,67 @@ Macの場合、JAVA_HOMEが設定されていない場合、下記のコマン�
 ```
 /usr/libexec/java_home
 ```
+<br>
+
+## ADBドライバについて(Windowsのみ)
+WindowsではAndroid端末をPCで認識させるためにADBドライバというものをインストールする必要があります。
+
+ご利用の端末のメーカー、機種を確認し、対象のドライバをダウンロードして下さい。
+
+下記に一部のメーカーについて記載します。
+
+・NEC
+<br>
+「USBドライバ（Android 開発者向け含む）」から対象の機種を選択し、ダウンロード
+<br>
+http://www.n-keitai.com/guide/download/
+
+・SHARP
+<br>
+http://k-tai.sharp.co.jp/support/developers/driver/
+
+・Fujitsu
+<br>
+「ADB用USBドライバ」より対象の機種を選択し、ダウンロード
+<br>
+http://spf.fmworld.net/fujitsu/c/develop/sp/android/
+
+・Google(Nexus)
+<br>
+「DOWNLOAD GOOGLE USB DRIVER」からダウンロード
+<br>
+http://developer.android.com/sdk/win-usb.html
+
+一部の機種はこちらからインストールする必要があります。
+<br>
+http://www.samsung.com/us/support/downloads/SPH-M920ZKASPR
+
+ダウンロードが終わったらAndroid端末をUSBケーブルにてPCと接続し、デバイスマネージャーを開きます。
+
+ほかのデバイス（OSのバージョンによって異なる可能性あり）内に「Android ADB〜」というものが！マークがついた状態で表示されますので、これを選択し、ドライバの更新を行います。
+
+ドライバの参照はコンピュータを参照とし、先ほどダウンロードしたフォルダを参照し、更新を行います。
+
+
+## Android.Supportファイルが見つからない場合の対処法
+Android Studioインストール後、プログラム作成でAndroid.Supportファイルが見つからずエラーとなることがあります。
+
+Android Studioの上のメニューより、[Tools]->[Android]->[SDK Manager]を選択します。
+<br>
+![](sdk1.png)
+
+画面中央の下にある「Launch Standalone SDK Manager」を選択します。
+<br>
+![](sdk2.png)
+
+SDK Managerが表示されるので、最後の方にあるExtrasの「Android Support Repository」と「Android Support Library」を確認します。
+<br>
+![](sdk3.png)
+
+ここが最新でない場合は最新にして下さい。
+<br>
+最新の状態でエラーとなる場合、一度削除し、再度インストールすることで正常に動作するようになる場合があります。
+
 ## SourceTreeのインストール
 
 SourceTreeをダウンロードする。
