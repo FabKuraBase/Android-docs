@@ -109,8 +109,10 @@ http://www.samsung.com/us/support/downloads/SPH-M920ZKASPR
 ドライバの参照はコンピュータを参照とし、先ほどダウンロードしたフォルダを参照し、更新を行います。
 
 
-## Android.Supportファイルが見つからない場合の対処法
+## Android SDKについて
 Android Studioインストール後、プログラム作成でAndroid.Supportファイルが見つからずエラーとなることがあります。
+<br>
+その場合はSDK Managerより設定を行います。
 
 Android Studioの上のメニューより、[Tools]->[Android]->[SDK Manager]を選択します。
 <br>
@@ -120,9 +122,13 @@ Android Studioの上のメニューより、[Tools]->[Android]->[SDK Manager]を
 <br>
 ![](sdk2.png)
 
-SDK Managerが表示されるので、最後の方にあるExtrasの「Android Support Repository」と「Android Support Library」を確認します。
-<br>
+
+SDK Managerが表示されるのでここで必要なものをインストールして下さい。<br>
 ![](sdk3.png)
+
+
+### ※Android.Supportファイルが見つからない場合の対処法
+最後の方にあるExtrasの「Android Support Repository」と「Android Support Library」を確認します。
 
 ここが最新でない場合は最新にして下さい。
 <br>
