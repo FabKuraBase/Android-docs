@@ -61,6 +61,7 @@
    * [Button](ui04.md)
    * [TextView](ui05.md)
    * [EditText](ui06.md)
+   * [電卓の作成](ui07.md)
 * [Arduino Bluetooth連携](chapter11.md)
    * [事前準備](article2-1.md)
    * [テキスト送受信](article2-2.md)
