@@ -128,9 +128,9 @@ SDK Managerが表示されるのでここで必要なものをインストール
 
 
 ### ※Android.Supportファイルが見つからない場合の対処法
-最後の方にあるExtrasの「Android Support Repository」と「Android Support Library」を確認します。
+SDK Managerの最後の方にあるExtrasの「Android Support Repository」と「Android Support Library」を確認します。
 
-ここが最新でない場合は最新にして下さい。
+ここが最新でない場合はまず最新にして下さい。
 <br>
 最新の状態でエラーとなる場合、一度削除し、再度インストールすることで正常に動作するようになる場合があります。
 
