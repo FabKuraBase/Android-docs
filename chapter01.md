@@ -92,6 +92,10 @@ http://k-tai.sharp.co.jp/support/developers/driver/
 <br>
 http://spf.fmworld.net/fujitsu/c/develop/sp/android/
 
+・sony
+<br>
+http://developer.sonymobile.com/downloads/drivers/
+
 ・Google(Nexus)
 <br>
 「DOWNLOAD GOOGLE USB DRIVER」からダウンロード
