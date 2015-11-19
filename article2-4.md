@@ -1,6 +1,8 @@
 # センサーデータをAndroid端末で表示
 
 今回は使用するセンサーは距離センサーです。
+<br>
+※FaBo Brickを使用時は他のセンサーをご使用下さい。
 
 ## Arduino設定
 
@@ -442,3 +444,93 @@ Sensorボタンを押して値の確認をしてみましょう。
 ※ボタンを押すタイミングによっては値の一部のみ表示されてしまいます。
 <br>
 対応するには終了文字をAndroid側で判断し、終了文字がくるまで格納してから出力する必要があります。
+
+
+## センサーデータ対応例
+
+
+### Arduino
+
+loopの処理を以下のように変更します。<br>
+変更内容としてはセンサーデータ送信後に'※'の文字を送信しています。
+```c
+void loop(){
+
+  if(android.available()){
+    inByte = android.read();
+    Serial.println(inByte);
+
+    // 受信データによりLEDの制御を行う
+    if(inByte == 49){
+      digitalWrite(led,HIGH);
+    } else if(inByte == 50){
+      // センサーデータ取得
+      getSensor = analogRead(sensorPin);
+      android.print(getSensor);
+      android.print('*');
+    } else {
+      digitalWrite(led,LOW);
+    }
+
+  } 
+```
+
+Android
+<br>
+受け取った文字を格納し、'※'が入った時点で出力を行うように変更します。
+
+MainActivity.javaのファイルを以下のように変更
+
+MainActivity内で変数定義の追加
+```java
+    /** 取得データを格納(文字列) */
+    private String out_Text ="";
+    /** 取得データの終了文字以降(2文字目以降)を格納(文字列) */
+    private String out_Text_bk ="";
+```
+
+スレッド処理(run)内のループ処理を変更
+```java
+            while(isRunning){
+
+                // InputStreamの読み込み
+                bytes = mmInStream.read(buffer);
+                Log.i(TAG,"bytes="+bytes);
+                // String型に変換(退避用に文字が存在する場合はそれも含めて設定)
+                String readMsg = out_Text_bk + new String(buffer, 0, bytes);
+                // 退避用変数の初期化
+                out_Text_bk = "";
+                // 出力フラグの初期化
+                Boolean dataEndFlg = false;
+
+                // 読み込んだ文字列を1文字ずつ取得
+                for(int i=0 ; readMsg.length() > i ; i++) {
+                    char readChar = readMsg.charAt(i);
+                    // 文字判定
+                    if (readChar == '*')  {
+                        // 終了文字を確認した時点で出力フラグを立てる
+                        dataEndFlg = true;
+                    // 終了文字以降
+                    }else if (dataEndFlg) {
+                        // 文字を退避
+                        out_Text_bk = out_Text_bk + readChar;
+                    // 終了文字以前
+                    }else{
+                        // 出力用に設定
+                        out_Text = out_Text + readChar;
+                    }
+                }
+
+                // 出力フラグがtrueかつnull(空文字含む)以外なら表示
+                if( dataEndFlg && out_Text.trim() != null && !out_Text.trim().equals("")){
+                    Log.i(TAG,"value="+out_Text.trim());
+
+                    valueMsg = new Message();
+                    valueMsg.what = VIEW_INPUT;
+                    valueMsg.obj = out_Text.trim();
+                    mHandler.sendMessage(valueMsg);
+                    // 出力用変数の初期化
+                    out_Text = "";
+                }
+            }
+```
