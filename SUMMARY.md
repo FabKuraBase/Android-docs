@@ -73,4 +73,5 @@
    * [テキスト送信](article3-2.md)
    * [テキスト受信](article3-3.md)
    * [AndroidからLED制御](article3-4.md)
+   * [Bluetoothでのデバック](article-3-5.md)
 
