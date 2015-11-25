@@ -10,6 +10,7 @@ AndroidとPCをUSBでつなぎ下記コマンドを実行
 /Users/ユーザ名/Library/Android/sdk/platform-tools/adb shell ifconfig
 ```
 
-
-192.168.2.5
+```
+/Users/ユーザ名/Library/Android/sdk/platform-tools/adb connect 192.168.100.7:8888
+```
 
