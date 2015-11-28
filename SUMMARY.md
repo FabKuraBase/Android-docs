@@ -65,6 +65,7 @@
 * [Android Wear](wear01.md)
     * [Android Wearの環境設定](wear02.md) 
     * [Android Wearと実機の接続](wear03.md) 
+    * [Android Wearとのデータ連携](wear04.md)
 * [Arduino Bluetooth連携](chapter11.md)
    * [事前準備](article2-1.md)
    * [テキスト送受信](article2-2.md)
