@@ -114,5 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
+Androidデバイス側にアプリをインストールし、Notificationを実行すると、それに同期しWear側にもNotificationが同期されます。
 
+![](img-wear/wear32.png)
 
