@@ -117,9 +117,46 @@ void loop() {
 }
 ```
 ## Android
+### Bluetooth認識設定
 
-まず画面レイアウトを作成します。
+Bluetoothの認識設定を行います。
 <br>
+[app]>[src]>[main]>[res]内のAndroidManifest.xmlを開き、下記の内容を追加します。
+
+```xml
+<uses-permission android:name="android.permission.BLUETOOTH" />
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+```
+    
+#### AndroidManifest.xml
+変更後はこのような状態になります。
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gclue.com.mybluetooth" >
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+```
+###画面レイアウト
 ロボカー操作用に↑ボタン、Stopボタン、↓ボタンを配置します。
 
 activity_main.xml
