@@ -1,54 +1,33 @@
 # ロボットカー制御
 
-ここではAndroid端末からロボットカーを制御します。
+ここではロボットカーキットの組み立て、およびAndroid端末より制御してみたいと思います。
 
-今回はFaBoのモーターシールドとBrickのBluetoothを使用します。
+
+## ロボットカー組み立て
+
+ロボットカーの組み立て方法、および配線はこちらをご参照下さい。
+<br>
+https://sites.google.com/a/gclue.jp/roboka-zuo-cheng/home
+
+
+## 使用するシールド
+今回はFaBoのモーターシールドを使用します。
+<br>
+使用方法はこちらをご参照下さい。
 
 モーターシールド
 <br>
 https://fabo.gitbooks.io/module/content/shield_motor/shield_motor.html
 
+## 使用するBrick
 Bluetooth
 <br>
 https://fabo.gitbooks.io/module/content/brick_serial_bluetooth/brick_serial_bluetooth.html
 
 
-## 接続
-ロボカーにArduinoを置き、その上にモーターシールドを載せます。
-<br>
-![](car1.JPG)
-
-電池ケース、および電池のコネクタからの配線をします。
-<br>
-電源用のコネクタに9V電池のコネクタ、その隣のコネクタに単三電池ケースからの線を接続し、ドライバーで固定します。
-<br>
-![](car2.JPG)
-
-次にモーターの接続をします。
-<br>
-下の図のように配置し、左から順に以下のように接続します。
-
-・右側のモーターのプラス(赤)
-<br>
-・右側のモーターマイナス(青or黒)
-<br>
-・左側のモーターのプラス(赤)
-<br>
-・左側のモーターマイナス(青or黒)
-<br>
-![](car3.JPG)
-
-接続が終わったら、モーターシールドの上にArduinoのOUT/INシールドを載せ、シリアルピンにBluetoothのBrickを接続します。
-<br>
-![](car4.JPG)
-
-裏側はこのようになっています。
-<br>なお、電池についてはプログラムが終わってから接続するようにします。
-![](car5.JPG)
-
 ## Arduino
 
-ここでは受信データにより前進、後退、停止するプログラムを書いてみます。
+Arduino側では、Android端末から受信したデータにより前進、後退、停止するプログラムを書きます。
 ```c
 #include <SoftwareSerial.h>
 
@@ -137,7 +116,7 @@ void loop() {
 ```
 ## Android
 
-まず画面レイアウトを変更します。
+まず画面レイアウトを作成します。
 <br>
 ロボカー操作用に↑ボタン、Stopボタン、↓ボタンを配置します。
 
@@ -188,7 +167,7 @@ activity_main.xml
 </LinearLayout>
 ```
 
-次にメインの処理を変更します。
+次にメインの処理を作成します。
 
 MainActivity.java
 ```java
@@ -485,7 +464,7 @@ public class MainActivity extends ActionBarActivity implements Runnable, View.On
 AndroidとBluetooth接続し、画面のボタンからロボットカーを操作してみてください。
 
 
-ここまで出来たら以下の内容を試してみましょう。
+ここまで出来ましたら以下の内容を試してみましょう。
 
 １．右旋回、左旋回機能を追加
 <br>
