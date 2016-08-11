@@ -34,13 +34,13 @@ Arduino UNOとArduino MEGAでは回路とスケッチが異なりますので別
 #include <SoftwareSerial.h>
 
 SoftwareSerial android(2,3);
-// SoftwareSerial android(10,11); // Fabo Brick使用時
+// SoftwareSerial android(12,13); // Fabo Brick使用時
 
 void setup(){
   // Bluetooth用のシリアルのポートを設定
   android.begin(115200);
   // arduinoのシリアルモニタ用
-  Serial.begin(19200); 
+  Serial.begin(9600); 
   
   Serial.write("init");
 }
