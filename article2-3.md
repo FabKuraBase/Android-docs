@@ -25,7 +25,7 @@ BrickのLEDの場合は13ピンに接続してください。
 #define led 13   // 13番ピンにてLEDを制御
 
 SoftwareSerial android(2,3);
-// SoftwareSerial android(10,11); // FaBo Brick使用時
+// SoftwareSerial android(12,13); // FaBo Brick使用時
 
 int inByte = 0; // androidからのテキスト取得用
 
@@ -171,7 +171,9 @@ import android.bluetooth.BluetoothSocket;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.ActionBarActivity;
+//import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -183,7 +185,8 @@ import java.io.OutputStream;
 import java.util.Set;
 import java.util.UUID;
 
-public class MainActivity extends ActionBarActivity implements Runnable, View.OnClickListener {
+//public class MainActivity extends ActionBarActivity implements Runnable, View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements Runnable, View.OnClickListener {
     /* tag */
     private static final String TAG = "BluetoothSample";
 
