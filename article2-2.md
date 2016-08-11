@@ -89,7 +89,7 @@ void setup(){
   // Bluetooth用のシリアルのポートを設定
   Serial1.begin(115200);
   // arduinoのシリアルモニタ用
-  Serial.begin(19200); 
+  Serial.begin(9600); 
   
   Serial.write("init");
 }
