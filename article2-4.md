@@ -26,7 +26,7 @@
 #define sensorPin 0 // センサーを使用するピン
 
 SoftwareSerial android(2,3);
-//SoftwareSerial android(10,11); // FaBo Brick使用時
+//SoftwareSerial android(12,13); // FaBo Brick使用時
 
 int inByte = 0;    // androidからのテキスト取得用
 int getSensor = 0; // センサーデータ取得用
@@ -35,7 +35,7 @@ void setup(){
   // Bluetooth用のシリアルのポートを設定
   android.begin(115200);
   // arduinoのシリアルモニタ用
-  Serial.begin(19200); 
+  Serial.begin(9600); 
   // LEDピンの出力設定
   pinMode(led,OUTPUT);
   Serial.write("init");
@@ -85,7 +85,7 @@ void setup(){
   // Bluetooth用のシリアルのポートを設定
   android.begin(115200);
   // arduinoのシリアルモニタ用
-  Serial.begin(19200); 
+  Serial.begin(9600); 
   // LEDピンの出力設定
   pinMode(led,OUTPUT);
   Serial.write("init");
@@ -131,7 +131,8 @@ import android.bluetooth.BluetoothSocket;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.ActionBarActivity;
+//import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -143,7 +144,8 @@ import java.io.OutputStream;
 import java.util.Set;
 import java.util.UUID;
 
-public class MainActivity extends ActionBarActivity implements Runnable, View.OnClickListener {
+//public class MainActivity extends ActionBarActivity implements Runnable, View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements Runnable, View.OnClickListener {
     /* tag */
     private static final String TAG = "BluetoothSample";
 
@@ -452,7 +454,7 @@ Sensorボタンを押して値の確認をしてみましょう。
 ### Arduino
 
 loopの処理を以下のように変更します。<br>
-変更内容としてはセンサーデータ送信後に'※'の文字を送信しています。
+変更内容としてはセンサーデータ送信後に'*'の文字を送信しています。
 ```c
 void loop(){
 
@@ -477,7 +479,7 @@ void loop(){
 
 Android
 <br>
-受け取った文字を格納し、'※'が入った時点で出力を行うように変更します。
+受け取った文字を格納し、'*'が入った時点で出力を行うように変更します。
 
 MainActivity.javaのファイルを以下のように変更
 
